@@ -1,9 +1,18 @@
 import { Header } from "./components/Header"
 import { HomePage } from "./pages/HomePage"
-
+import {useState, useEffect} from "react"
 function App() {
+  const [perfumes, setPerfumes] = useState([]);
+    useEffect(() => {
+        const fetchPerfumes = async () => {
+            const response = await fetch('/perfumes.json')
+            const data = await response.json()
+            setPerfumes(data)
+        }
+        fetchPerfumes()
+    }, [])
   return (
-    <HomePage></HomePage>
+    <HomePage perfumes={perfumes} setPerfumes={setPerfumes}></HomePage>
   )
 }
 

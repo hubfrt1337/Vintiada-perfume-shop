@@ -6,9 +6,10 @@ import armaniLogo from "../assets/brands/armani.png"
 import diorLogo from "../assets/brands/dior.png"
 import gucciLogo from "../assets/brands/gucci.png"
 import { BestSellers } from "./Bestsellers"
+import { Arrivals } from "./Arrivals"
 import "./HomePage.css"
 import { Adv } from "./Advertisements"
-export function HomePage(){
+export function HomePage({perfumes, setPerfumes}){
     useEffect(() => {
         document.title = "Vintiada"
     })
@@ -33,7 +34,8 @@ export function HomePage(){
                 </div>
             </div>
             <Adv></Adv>
-            <BestSellers></BestSellers>
+            <BestSellers perfumes={perfumes} setPerfumes={setPerfumes}></BestSellers>
+            <Arrivals perfumes={perfumes}></Arrivals>
         </>
     )
 }

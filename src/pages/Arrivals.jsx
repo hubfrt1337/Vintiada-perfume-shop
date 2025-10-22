@@ -1,14 +1,11 @@
 import "./Bestsellers.css"
-export function BestSellers({perfumes, setPerfumes}) {
-    
-    const bestsellers = perfumes.filter(perfum => perfum.bestseller)
-        .sort(() => 0.5 - Math.random()).slice(0, 6)
-
+export function Arrivals({perfumes}){
+    const arrivals = perfumes.slice(12,18);
     return (
-        <div className="best-sellers-container">
-            <div className="title-best">Best Sellers</div>
+        <div className="best-sellers-container arrivals">
+            <div className="title-best">New Arrivals</div>
             <div className="perfumes-container">
-                {bestsellers.map(perfum => {
+                {arrivals.map(perfum => {
                     return (
                         <div className="flex-best" key={perfum.id}>
                             <div className="image-container">
