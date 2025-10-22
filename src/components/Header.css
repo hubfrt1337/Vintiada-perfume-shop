@@ -12,6 +12,7 @@ header{
 
 .company-icon{
     font-size: 2rem;
+    cursor: pointer;
 }
 .middle-section{
     flex-grow: 1;
