@@ -40,7 +40,8 @@ header{
 }
 .type:hover{
     cursor: pointer;
-    background: linear-gradient(rgb(249, 249, 215), rgb(208, 255, 208))
+    background-color: rgb(202, 191, 191);
+    color: white;
 }
 
 .right-section{
