@@ -19,7 +19,12 @@ export function BestSellers(){
             <div className="perfumes-container">
                 {bestsellers.map(perfum => {
                     return (
+                        <div key={perfum.id}>
+                        <div className="image-container">
+                            <img src={perfum.image}></img>
+                        </div>
                         <div key={perfum.id}>{perfum.name}</div>
+                        </div>
                     )
                 })}
             </div>

@@ -4,9 +4,21 @@
     margin-top: 2rem
 }
 .title-best{
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .perfumes-container{
     display: flex;
+    justify-content: space-between;
+}
+.image-container{
+    width: 150px;
+    height: 200px;
+}
+.image-container>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

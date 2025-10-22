@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "La Vie Est Belle",
+        "image": "/lancome.jpg",
         "brand": "Lancôme",
         "type": "EDP",
         "notes": {
@@ -28,6 +29,7 @@
     {
         "id": 2,
         "name": "Bleu de Chanel",
+        "image": "/bleu.webp",
         "brand": "Chanel",
         "type": "EDT",
         "notes": {
@@ -53,6 +55,7 @@
     {
         "id": 3,
         "name": "Black Orchid",
+        "image": "/orchid.jpg",
         "brand": "Tom Ford",
         "type": "EDP",
         "notes": {
@@ -78,6 +81,7 @@
     {
         "id": 4,
         "name": "Amber Eclipse",
+        "image": "byzantine",
         "brand": "Solstice Scents",
         "type": "EDP",
         "notes": {
@@ -101,6 +105,7 @@
     {
         "id": 5,
         "name": "Rose Elixir",
+        "image": "/mortale",
         "brand": "Montale",
         "type": "EDP",
         "notes": {
@@ -124,6 +129,7 @@
     {
         "id": 6,
         "name": "Oud Noir",
+        "image": "/pour.jpg",
         "brand": "Versace",
         "type": "EDP",
         "notes": {
@@ -147,7 +153,8 @@
     },
     {
         "id": 7,
-        "name": "Citrus Drift",
+        "name": "Fresh Citrus",
+        "image": "clean",
         "brand": "Clean Reserve",
         "type": "EDT",
         "notes": {
@@ -171,6 +178,7 @@
     {
         "id": 8,
         "name": "Velvet Bloom",
+        "image": "/byredo.jpg",
         "brand": "Byredo",
         "type": "EDP",
         "notes": {
@@ -194,6 +202,7 @@
     {
         "id": 9,
         "name": "Ocean Mist",
+        "image": "mist.webp",
         "brand": "Calvin Klein",
         "type": "EDT",
         "notes": {
@@ -217,6 +226,7 @@
     {
         "id": 10,
         "name": "Golden Petal",
+        "image": "/golden.webp",
         "brand": "Gucci",
         "type": "EDP",
         "notes": {
@@ -240,6 +250,7 @@
     {
         "id": 11,
         "name": "Midnight Leather",
+        "image": "/midnight.jpg",
         "brand": "Yves Saint Laurent",
         "type": "EDP",
         "notes": {
@@ -263,6 +274,7 @@
     {
         "id": 12,
         "name": "Coconut Sky",
+        "image": "/maison.webp",
         "brand": "Maison Margiela",
         "type": "EDT",
         "notes": {
@@ -286,6 +298,7 @@
     {
         "id": 13,
         "name": "Spice Trail",
+        "image": "/spice.webp",
         "brand": "Hermès",
         "type": "EDP",
         "notes": {
@@ -309,6 +322,7 @@
     {
         "id": 14,
         "name": "Lunar Bloom",
+        "image": "malone",
         "brand": "Jo Malone",
         "type": "EDP",
         "notes": {
@@ -332,6 +346,7 @@
     {
         "id": 15,
         "name": "Forest Whisper",
+        "image": "/forest.jpg",
         "brand": "Diptyque",
         "type": "EDP",
         "notes": {
@@ -355,6 +370,7 @@
     {
         "id": 16,
         "name": "Saffron Veil",
+        "image": "/saxofoni.webp",
         "brand": "Ex Nihilo",
         "type": "EDP",
         "notes": {
@@ -378,6 +394,7 @@
     {
         "id": 17,
         "name": "Cedar Storm",
+        "image": "/daxon.avif",
         "brand": "Tom Daxon",
         "type": "EDP",
         "notes": {
@@ -401,6 +418,7 @@
     {
         "id": 18,
         "name": "Peach Mirage",
+        "image": "pech.avif",
         "brand": "Juliette Has a Gun",
         "type": "EDT",
         "notes": {
@@ -424,6 +442,7 @@
     {
         "id": 19,
         "name": "Smoke & Silk",
+        "image": "/amounage.png",
         "brand": "Amouage",
         "type": "EDP",
         "notes": {
@@ -447,6 +466,7 @@
     {
         "id": 20,
         "name": "Lime Serenade",
+        "image": "atelier.jpg",
         "brand": "Atelier Cologne",
         "type": "EDT",
         "notes": {
@@ -470,6 +490,7 @@
     {
         "id": 21,
         "name": "Petal Dust",
+        "image": "/chloe.webp",
         "brand": "Chloé",
         "type": "EDP",
         "notes": {
@@ -493,6 +514,7 @@
     {
         "id": 22,
         "name": "Amber Drift",
+        "image": "labo.jpg",
         "brand": "Le Labo",
         "type": "EDP",
         "notes": {
@@ -516,6 +538,7 @@
     {
         "id": 23,
         "name": "Vanilla Horizon",
+        "image": "/kilian.jpg",
         "brand": "Kilian",
         "type": "EDP",
         "notes": {
@@ -539,6 +562,7 @@
     {
         "id": 24,
         "name": "Icy Vetiver",
+        "image": "/icy.jpg",
         "brand": "Ermenegildo Zegna",
         "type": "EDT",
         "notes": {
@@ -562,6 +586,7 @@
     {
         "id": 25,
         "name": "Jasmine Rain",
+        "image": "/vetiver.jpg",
         "brand": "Bvlgari",
         "type": "EDP",
         "notes": {
@@ -585,6 +610,7 @@
     {
         "id": 26,
         "name": "Smoked Fig",
+        "image": "/durga.jpg",
         "brand": "DS & Durga",
         "type": "EDP",
         "notes": {
@@ -608,6 +634,7 @@
     {
         "id": 27,
         "name": "Citrus Ember",
+        "image": "/aesop.jpg",
         "brand": "Aesop",
         "type": "EDT",
         "notes": {
@@ -631,6 +658,7 @@
     {
         "id": 28,
         "name": "Powder Rose",
+        "image": "/narciso.jpg",
         "brand": "Narciso Rodriguez",
         "type": "EDP",
         "notes": {
@@ -654,6 +682,7 @@
     {
         "id": 29,
         "name": "Green Eclipse",
+        "image": "/gracos.jpg",
         "brand": "Comme des Garçons",
         "type": "EDP",
         "notes": {
@@ -677,6 +706,7 @@
     {
         "id": 30,
         "name": "Velvet Citrus",
+        "image": "/evandie.webp",
         "brand": "Maison Francis Kurkdjian",
         "type": "EDT",
         "notes": {
@@ -700,6 +730,7 @@
     {
         "id": 31,
         "name": "Iron Woods",
+        "image": "/zara.webp",
         "brand": "Zara",
         "type": "EDP",
         "notes": {
@@ -723,6 +754,7 @@
     {
         "id": 32,
         "name": "Moonlight Iris",
+        "image": "/prada.jpg",
         "brand": "Prada",
         "type": "EDP",
         "notes": {
@@ -746,6 +778,7 @@
     {
         "id": 33,
         "name": "Amber Smoke",
+        "image": "/mancera.jpg",
         "brand": "Mancera",
         "type": "EDP",
         "notes": {
@@ -769,6 +802,7 @@
     {
         "id": 34,
         "name": "Fresh Basilica",
+        "image": "/acqua.jpg",
         "brand": "Acqua di Parma",
         "type": "EDT",
         "notes": {
@@ -792,6 +826,7 @@
     {
         "id": 35,
         "name": "Rosewood Whisper",
+        "image": "/pen.jpg",
         "brand": "Penhaligon's",
         "type": "EDP",
         "notes": {
@@ -815,6 +850,7 @@
     {
         "id": 36,
         "name": "Cobalt Drift",
+        "image": "/boss.webp",
         "brand": "Hugo Boss",
         "type": "EDT",
         "notes": {
@@ -838,6 +874,7 @@
     {
         "id": 37,
         "name": "Crimson Bloom",
+        "image": "/floris.webp",
         "brand": "Floris London",
         "type": "EDP",
         "notes": {
@@ -861,6 +898,7 @@
     {
         "id": 38,
         "name": "Silver Ash",
+        "image": "/silver.jpg",
         "brand": "Bentley",
         "type": "EDT",
         "notes": {
@@ -884,6 +922,7 @@
     {
         "id": 39,
         "name": "Tangerine Dream",
+        "image": "/guerlain.jpg",
         "brand": "Guerlain",
         "type": "EDP",
         "notes": {
@@ -907,6 +946,7 @@
     {
         "id": 40,
         "name": "Twilight Oud",
+        "image": "/twilight.jpg",
         "brand": "Maison Alhambra",
         "type": "EDP",
         "notes": {
@@ -930,6 +970,7 @@
     {
         "id": 41,
         "name": "Crisp Fern",
+        "image": "/crisp.jpg",
         "brand": "L'Artisan Parfumeur",
         "type": "EDT",
         "notes": {
@@ -953,6 +994,7 @@
     {
         "id": 42,
         "name": "Blush Nectar",
+        "image": "/nectar.jpg",
         "brand": "Victoria's Secret",
         "type": "EDP",
         "notes": {
@@ -976,6 +1018,7 @@
     {
         "id": 43,
         "name": "Mineral Drift",
+        "image": "/escentric.jpg",
         "brand": "Escentric Molecules",
         "type": "EDT",
         "notes": {
@@ -999,6 +1042,7 @@
     {
         "id": 44,
         "name": "Cypress Fade",
+        "image": "/memo.jpg",
         "brand": "Memo Paris",
         "type": "EDP",
         "notes": {
@@ -1022,6 +1066,7 @@
     {
         "id": 45,
         "name": "Golden Fig",
+        "image": "/fig.jpg",
         "brand": "Diptyque",
         "type": "EDP",
         "notes": {
@@ -1045,6 +1090,7 @@
     {
         "id": 46,
         "name": "Rose Ember",
+        "image": "/ambre.jpg",
         "brand": "Maison Crivelli",
         "type": "EDP",
         "notes": {
@@ -1068,6 +1114,7 @@
     {
         "id": 47,
         "name": "Cobalt Rain",
+        "image": "/ferrari.jpg",
         "brand": "Ferrari",
         "type": "EDT",
         "notes": {
@@ -1091,6 +1138,7 @@
     {
         "id": 48,
         "name": "Petal Smoke",
+        "image": "/etat.jpg",
         "brand": "Etat Libre d’Orange",
         "type": "EDP",
         "notes": {
@@ -1114,6 +1162,7 @@
     {
         "id": 49,
         "name": "Citrus Bloom",
+        "image": "/citrus.jpg",
         "brand": "The Different Company",
         "type": "EDT",
         "notes": {
@@ -1137,6 +1186,7 @@
     {
         "id": 50,
         "name": "Amber Frost",
+        "image": "/mont.jpg",
         "brand": "Montblanc",
         "type": "EDP",
         "notes": {
@@ -1160,6 +1210,7 @@
     {
         "id": 51,
         "name": "Sandal Dusk",
+        "image": "/santal.webp",
         "brand": "Ajmal",
         "type": "EDP",
         "notes": {
@@ -1183,6 +1234,7 @@
     {
         "id": 52,
         "name": "Pearl Bloom",
+        "image": "oscar.jpg",
         "brand": "Oscar de la Renta",
         "type": "EDP",
         "notes": {
@@ -1206,6 +1258,7 @@
     {
         "id": 53,
         "name": "Cinder Spice",
+        "image": "/extasy.jpg",
         "brand": "Maison Tahité",
         "type": "EDP",
         "notes": {
@@ -1229,6 +1282,7 @@
     {
         "id": 54,
         "name": "Azure Drift",
+        "image": "/spirit.webp",
         "brand": "Salvatore Ferragamo",
         "type": "EDT",
         "notes": {
@@ -1252,6 +1306,7 @@
     {
         "id": 55,
         "name": "Orchid Haze",
+        "image": "haze.webp",
         "brand": "Carolina Herrera",
         "type": "EDP",
         "notes": {
@@ -1275,6 +1330,7 @@
     {
         "id": 56,
         "name": "Citrus Alloy",
+        "image": "/rabane.jpg",
         "brand": "Paco Rabanne",
         "type": "EDT",
         "notes": {
@@ -1298,6 +1354,7 @@
     {
         "id": 57,
         "name": "Amber Silk",
+        "image": "/imperial.jpg",
         "brand": "Van Cleef & Arpels",
         "type": "EDP",
         "notes": {
@@ -1321,6 +1378,7 @@
     {
         "id": 58,
         "name": "Citrus Velvet",
+        "image": "/batikanga.jpg",
         "brand": "Maison Matine",
         "type": "EDP",
         "notes": {
@@ -1344,6 +1402,7 @@
     {
         "id": 59,
         "name": "Spiced Bloom",
+        "image": "/blossom.jpg",
         "brand": "Histoires de Parfums",
         "type": "EDP",
         "notes": {
@@ -1367,6 +1426,7 @@
     {
         "id": 60,
         "name": "Moss Eclipse",
+        "image": "/jayne.jpg",
         "brand": "Ormonde Jayne",
         "type": "EDP",
         "notes": {
@@ -1390,6 +1450,7 @@
     {
         "id": 61,
         "name": "Vanilla Drift",
+        "image": "/galivant.webp",
         "brand": "Gallivant",
         "type": "EDP",
         "notes": {
@@ -1413,6 +1474,7 @@
     {
         "id": 62,
         "name": "Rose Alloy",
+        "image": "/olf.jpg",
         "brand": "Laboratorio Olfattivo",
         "type": "EDP",
         "notes": {
@@ -1436,6 +1498,7 @@
     {
         "id": 63,
         "name": "Cedar Ice",
+        "image": "/garcons.jpg",
         "brand": "Comme des Garçons",
         "type": "EDT",
         "notes": {
@@ -1459,6 +1522,7 @@
     {
         "id": 64,
         "name": "Golden Neroli",
+        "image": "/green.jpg",
         "brand": "Hiram Green",
         "type": "EDP",
         "notes": {
