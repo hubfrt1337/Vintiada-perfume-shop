@@ -1,9 +1,11 @@
 .brands-container{
     display: flex;
     justify-content: space-around;
-    margin-top: 2rem;
     background-color: rgb(202, 191, 191);
     padding: 1rem;
+    width: 90vw;
+    margin: auto;
+    margin-top: 2rem;
 }
 .brand{
     width: 150px;

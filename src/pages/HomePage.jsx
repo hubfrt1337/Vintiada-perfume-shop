@@ -6,6 +6,7 @@ import armaniLogo from "../assets/brands/armani.png"
 import diorLogo from "../assets/brands/dior.png"
 import gucciLogo from "../assets/brands/gucci.png"
 import "./HomePage.css"
+import { Adv } from "./Advertisements"
 export function HomePage(){
     useEffect(() => {
         document.title = "Vintiada"
@@ -30,6 +31,7 @@ export function HomePage(){
                     <img src={gucciLogo}></img>
                 </div>
             </div>
+            <Adv></Adv>
         </>
     )
 }

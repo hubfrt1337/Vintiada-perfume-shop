@@ -1,0 +1,30 @@
+section{
+    width: 90vw;
+    margin: auto;
+    margin-top: 2rem;
+    position: relative;
+}
+section>img{
+    width: 100%;
+    object-fit: contain;
+}
+.arrow{
+    color: rgb(202, 191, 191);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+
+}
+.arrow:hover{
+    color: rgb(247, 245, 245);
+}
+.l-arrow{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+}
+.right-arrow{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+}
