@@ -16,9 +16,11 @@ export function Header() {
                     </input>
                 </div>
                 <div className="right-section">
-                    <div className="sign-in"></div>
+                    <div className="sign-in">
+                        <VscAccount className="icons-header"/>
+                    </div>
                     <div className="cart-container">
-                        <IoCartOutline className="cart-icon"/>
+                        <IoCartOutline className="icons-header"/>
                     </div>
                 </div>
             </nav>

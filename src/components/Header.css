@@ -42,7 +42,14 @@ header{
     background: linear-gradient(rgb(249, 249, 215), rgb(208, 255, 208))
 }
 
-.cart-icon{
-    width: 30px;
-    height: 30px;
+.right-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.icons-header{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
