@@ -5,6 +5,7 @@ import versaceLogo from "../assets/brands/versace.webp"
 import armaniLogo from "../assets/brands/armani.png"
 import diorLogo from "../assets/brands/dior.png"
 import gucciLogo from "../assets/brands/gucci.png"
+import { BestSellers } from "./Bestsellers"
 import "./HomePage.css"
 import { Adv } from "./Advertisements"
 export function HomePage(){
@@ -32,6 +33,7 @@ export function HomePage(){
                 </div>
             </div>
             <Adv></Adv>
+            <BestSellers></BestSellers>
         </>
     )
 }

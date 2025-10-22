@@ -1,0 +1,9 @@
+.best-sellers-container{
+    width: 90vw;
+    margin: auto;
+    margin-top: 2rem
+}
+.title-best{
+    font-size: 1.5rem;
+    text-align: center;
+}
