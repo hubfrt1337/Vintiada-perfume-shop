@@ -8,10 +8,12 @@
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 .perfumes-container{
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 .image-container{
     width: 150px;
@@ -21,4 +23,23 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.flex-best{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.perfum-brand{
+   color: rgb(121, 117, 117);
+   margin-top: 0.5rem;
+   margin-bottom: 0.2rem;
+}
+.perfum-name{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.perfum-type{
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
 }
