@@ -1,5 +1,5 @@
-import adv1Big from "../assets/adv-1big.png"
-import adv2Big from "../assets/adv-2big.png"
+import adv1Big from "../../assets/adv-1big.png"
+import adv2Big from "../../assets/adv-2big.png"
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { useState } from "react";

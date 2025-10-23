@@ -1,6 +1,7 @@
 import "./header.css"
 import { IoCartOutline } from "react-icons/io5";
 import { VscAccount } from "react-icons/vsc";
+import { NavLink } from "react-router";
 export function Header() {
     return (
         <header>
@@ -25,13 +26,14 @@ export function Header() {
                 </div>
             </nav>
             <div className="types-container">
-                <div className="type">Mascuiline</div>
-                <div className="type">Femine</div>
+                <div className="type">
+                    <NavLink to="/masculine">Masculine</NavLink></div>
+                <div className="type">Feminine</div>
                 <div className="type">Unisex</div>
-                <div className="type">Feature</div>
-                <div className="type">Feature</div>
-                <div className="type">Feature</div>
-                <div className="type">Feature</div>
+                <div className="type">Woody</div>
+                <div className="type">Floral</div>
+                <div className="type">Fresh</div>
+                <div className="type">Oriental</div>
             </div>
         </header>
     )

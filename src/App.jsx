@@ -1,5 +1,5 @@
 import { Header } from "./components/Header"
-import { HomePage } from "./pages/HomePage"
+import { HomePage } from "./pages/Homepage/HomePage"
 import {useState, useEffect} from "react"
 function App() {
   const [perfumes, setPerfumes] = useState([]);
