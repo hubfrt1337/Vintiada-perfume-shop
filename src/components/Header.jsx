@@ -26,15 +26,20 @@ export function Header({perfumes}) {
                 </div>
             </nav>
             <div className="types-container">
-                <div className="type">
                     <NavLink to="/masculine"
-                    className={({isActive}) => isActive ? "active-link" : "inactive-link"}>Masculine</NavLink></div>
-                <div className="type">Feminine</div>
-                <div className="type">Unisex</div>
-                <div className="type">Woody</div>
-                <div className="type">Floral</div>
-                <div className="type">Fresh</div>
-                <div className="type">Oriental</div>
+                    className={({isActive}) => isActive ? "active-link" : "inactive-link"}><div className="type">Masculine</div></NavLink>
+                    <NavLink to="/feminine"
+                    className={({isActive}) => isActive ? "active-link" : "inactive-link"}><div className="type">Feminine</div></NavLink>
+                    <NavLink to="/unisex"
+                    className={({isActive}) => isActive ? "active-link" : "inactive-link"}><div className="type">Unisex</div></NavLink>
+                    <NavLink to="/woody"
+                    className={({isActive}) => isActive ? "active-link" : "inactive-link"}><div className="type">Woody</div></NavLink>
+                    <NavLink to="/floral"
+                    className={({isActive}) => isActive ? "active-link" : "inactive-link"}><div className="type">Floral</div></NavLink>
+                    <NavLink to="/fresh"
+                    className={({isActive}) => isActive ? "active-link" : "inactive-link"}><div className="type">Fresh</div></NavLink>
+                    <NavLink to="/oriental"
+                    className={({isActive}) => isActive ? "active-link" : "inactive-link"}><div className="type">Oriental</div></NavLink>
             </div>
         </header>
     )
