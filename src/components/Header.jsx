@@ -27,7 +27,8 @@ export function Header({perfumes}) {
             </nav>
             <div className="types-container">
                 <div className="type">
-                    <NavLink to="/masculine">Masculine</NavLink></div>
+                    <NavLink to="/masculine"
+                    className={({isActive}) => isActive ? "active-link" : "inactive-link"}>Masculine</NavLink></div>
                 <div className="type">Feminine</div>
                 <div className="type">Unisex</div>
                 <div className="type">Woody</div>
