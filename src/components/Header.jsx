@@ -2,7 +2,7 @@ import "./header.css"
 import { IoCartOutline } from "react-icons/io5";
 import { VscAccount } from "react-icons/vsc";
 import { NavLink } from "react-router";
-export function Header() {
+export function Header({perfumes}) {
     return (
         <header>
             <nav className="navbar">

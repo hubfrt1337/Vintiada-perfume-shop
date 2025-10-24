@@ -9,13 +9,15 @@ import { BestSellers } from "./Bestsellers"
 import { Arrivals } from "./Arrivals"
 import "./HomePage.css"
 import { Adv } from "./Advertisements"
-export function HomePage({perfumes, setPerfumes}){
+import { useOutletContext } from "react-router"
+export function HomePage(){
     useEffect(() => {
         document.title = "Vintiada"
     })
+    const {perfumes, setPerfumes} = useOutletContext()
     return (
         <>
-        <Header></Header>
+        <Header perfumes={perfumes}></Header>
             <div className="brands-container">
                 <div className="brand">
                     <img src={chanelLogo}></img>

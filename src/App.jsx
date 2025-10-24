@@ -1,5 +1,6 @@
 import { Header } from "./components/Header"
 import { HomePage } from "./pages/Homepage/HomePage"
+import { Outlet } from "react-router";
 import {useState, useEffect} from "react"
 function App() {
   const [perfumes, setPerfumes] = useState([]);
@@ -12,7 +13,9 @@ function App() {
         fetchPerfumes()
     }, [])
   return (
-    <HomePage perfumes={perfumes} setPerfumes={setPerfumes}></HomePage>
+    <>
+    <Outlet context={{perfumes, setPerfumes}}></Outlet>
+    </>
   )
 }
 
