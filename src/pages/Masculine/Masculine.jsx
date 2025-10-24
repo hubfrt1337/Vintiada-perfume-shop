@@ -1,12 +1,12 @@
 import { useOutletContext } from "react-router";
 import { Header } from "../../components/Header";
-
+import { RenderPerfumes } from "../../components/RenderPerfumes";
 export function Masculine(){
     const {perfumes} = useOutletContext();
-    console.log(perfumes)
     return (
         <>
         <Header></Header>
+        <RenderPerfumes perfumes={perfumes} type="masculine"></RenderPerfumes>
         </>
     )
 }
