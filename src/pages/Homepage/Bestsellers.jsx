@@ -19,8 +19,8 @@ export function BestSellers({perfumes, setPerfumes}) {
                             <div className="perfum-type">{perfum.gender === "unisex"
                                 ? "Perfume for Everyone"
                                 : perfum.gender === "feminine"
-                                    ? "Perfume for women"
-                                    : "Perfume for men"}</div>
+                                    ? "Perfume for Women"
+                                    : "Perfume for Men"}</div>
                         </div>
                     )
                 })}

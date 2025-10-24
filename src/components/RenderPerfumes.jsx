@@ -10,7 +10,12 @@ export function RenderPerfumes({ perfumes, type }) {
                             </div>
                             <div className="perfum-brand">{perfum.brand}</div>
                             <div className="perfum-name">{perfum.name}</div>
-                            <div className="perfum-type">Perfume for men</div>
+                            <div className="perfum-type">Perfume for 
+                                {perfum.gender === "masculine" ? " Men" :
+                                perfum.gender === "feminine" ? " Women" 
+                            : " Everyone"}
+                                
+                            </div>
                         </div>
 
                     )

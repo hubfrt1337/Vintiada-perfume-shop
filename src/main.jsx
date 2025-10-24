@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import { Masculine } from './pages/Masculine/Masculine.jsx'
 import { HomePage } from './pages/Homepage/HomePage.jsx'
+import { Feminine } from './pages/Feminine/Feminine.jsx'
 import './index.css'
 import App from './App.jsx'
 const router = createBrowserRouter([
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/feminine",
-        element: <Masculine></Masculine>
+        element: <Feminine></Feminine>
       },
       {
         path: "/unisex",
