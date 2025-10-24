@@ -81,7 +81,7 @@
     {
         "id": 4,
         "name": "Amber Eclipse",
-        "image": "byzantine",
+        "image": "/byzantine.webp",
         "brand": "Solstice Scents",
         "type": "EDP",
         "notes": {
@@ -154,7 +154,7 @@
     {
         "id": 7,
         "name": "Fresh Citrus",
-        "image": "clean",
+        "image": "/clean.jpg",
         "brand": "Clean Reserve",
         "type": "EDT",
         "notes": {
@@ -1450,7 +1450,7 @@
     {
         "id": 61,
         "name": "Vanilla Drift",
-        "image": "/galivant.webp",
+        "image": "/galivant.jpg",
         "brand": "Gallivant",
         "type": "EDP",
         "notes": {
