@@ -6,6 +6,9 @@ import { HomePage } from './pages/Homepage/HomePage.jsx'
 import { Feminine } from './pages/Feminine/Feminine.jsx'
 import { Unisex } from './pages/Unisex/Unisex.jsx'
 import { Woody } from './pages/Woody.jsx'
+import { Fresh } from './pages/Fresh.jsx'
+import { Oriental } from './pages/Oriental.jsx'
+import { Floral } from './pages/Floral.jsx'
 import './index.css'
 import App from './App.jsx'
 const router = createBrowserRouter([
@@ -35,15 +38,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/floral",
-        element: <Masculine></Masculine>
+        element: <Floral></Floral>
       },
       {
         path: "/fresh",
-        element: <Masculine></Masculine>
+        element: <Fresh></Fresh>
       },
       {
         path: "/oriental",
-        element: <Masculine></Masculine>
+        element: <Oriental></Oriental>
       },
     ]
   },
