@@ -1,0 +1,57 @@
+[
+    {
+        "id": 25,
+        "name": "Jasmine Rain",
+        "image": "/jasmine.jpg",
+        "brand": "Bvlgari",
+        "type": "EDP",
+        "notes": {
+            "top": [
+                "green notes",
+                "lemon"
+            ],
+            "heart": [
+                "jasmine",
+                "lily of the valley"
+            ],
+            "base": [
+                "white musk",
+                "cedar"
+            ]
+        },
+        "category": "floral green",
+        "gender": "feminine",
+        "bestseller": false,
+        "stars": 4,
+        "price": 8500
+    },
+     {
+        "id": 1,
+        "name": "La Vie Est Belle",
+        "image": "/lancome.jpg",
+        "brand": "Lancôme",
+        "type": "EDP",
+        "notes": {
+            "top": [
+                "blackcurrant",
+                "pear"
+            ],
+            "heart": [
+                "iris",
+                "jasmine",
+                "orange blossom"
+            ],
+            "base": [
+                "vanilla",
+                "praline",
+                "tonka bean",
+                "patchouli"
+            ]
+        },
+        "category": "floral",
+        "gender": "feminine",
+        "bestseller": true,
+        "stars": 5,
+        "price": 10000
+    }
+]
