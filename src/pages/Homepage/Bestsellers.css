@@ -14,6 +14,27 @@
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-left: 20px;
+    padding-right: 20px;
+    scrollbar-width: none;
+}
+.perfumes-container::-webkit-scrollbar {
+    display: none;
+}
+.scroll-wrapper{
+    position: relative;
+}
+.arrow-left{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+}
+.arrow-right{
+    position: absolute;
+    top: 50%;
+    right: -5px;
 }
 .image-container{
     width: 150px;
@@ -53,4 +74,17 @@
 .arrivals{
     margin-top: 5rem;
     padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px){
+    .arrow-left,
+    .arrow-right{
+        display: none;
+    }
+}
+@media screen and (min-width: 1220px){
+    .arrow-left,
+    .arrow-right{
+        display: none;
+    }
 }
