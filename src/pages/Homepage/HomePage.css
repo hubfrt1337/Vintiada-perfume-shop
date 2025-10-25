@@ -38,6 +38,15 @@
 .box:hover{
     box-shadow: 0 0 1px 5px rgba(0, 0, 0, 0.5);
 }
+.stars-container{
+    width: 60px;
+    height: 30px;
+}
+.stars-container>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /*   
 style fajna obramówka.
 padding: 6px;

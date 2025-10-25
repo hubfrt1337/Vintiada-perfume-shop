@@ -1,13 +1,13 @@
 import "./header.css"
 import { IoCartOutline } from "react-icons/io5";
 import { VscAccount } from "react-icons/vsc";
-import { NavLink } from "react-router";
+import { NavLink, Link } from "react-router";
 export function Header({perfumes}) {
     return (
         <header>
             <nav className="navbar">
                 <div className="left-section">
-                    <div className="company-icon">Vintiada</div>
+                    <div className="company-icon"><Link to="/" style={{textDecoration: "none"}}>Vintiada</Link></div>
                 </div>
                 <div className="middle-section">
                     <input

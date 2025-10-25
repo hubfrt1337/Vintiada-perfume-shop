@@ -11,13 +11,15 @@ export function Arrivals({perfumes}){
                             <div className="image-container">
                                 <img src={perfum.image}></img>
                             </div>
-                            <div className="perfum-brand">{perfum.brand}</div>
-                            <div className="perfum-name">{perfum.name}</div>
-                            <div className="perfum-type">{perfum.gender === "unisex"
+                            <div className="perfum-brand child">{perfum.brand}</div>
+                            <div className="perfum-name child">{perfum.name}</div>
+                            <div className="perfum-type child">{perfum.gender === "unisex"
                                 ? "Perfume for Everyone"
                                 : perfum.gender === "feminine"
                                     ? "Perfume for Women"
                                     : "Perfume for Men"}</div>
+                                    <div className="stars-container"><img src={`/rating-${perfum.stars}.png`}></img></div>
+                                    <div>{(perfum.price / 100).toFixed(2)}$</div>
                         </div>
                     )
                 })}
