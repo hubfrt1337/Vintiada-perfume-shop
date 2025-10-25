@@ -634,7 +634,7 @@
     {
         "id": 25,
         "name": "Jasmine Rain",
-        "image": "/vetiver.jpg",
+        "image": "/jasmine.jpg",
         "brand": "Bvlgari",
         "type": "EDP",
         "notes": {
@@ -790,7 +790,7 @@
     {
         "id": 31,
         "name": "Iron Woods",
-        "image": "/zara.webp",
+        "image": "/zara.jpg",
         "brand": "Zara",
         "type": "EDP",
         "notes": {
@@ -1336,7 +1336,7 @@
     {
         "id": 52,
         "name": "Pearl Bloom",
-        "image": "oscar.jpg",
+        "image": "oscar.webp",
         "brand": "Oscar de la Renta",
         "type": "EDP",
         "notes": {

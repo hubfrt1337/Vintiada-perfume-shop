@@ -30,6 +30,7 @@
     grid-template-rows: 200px 25px 45px;
     place-items: center;
     cursor: pointer;
+    place-content: center;
 }
 .flex-best:hover .child{
     text-decoration: underline;
