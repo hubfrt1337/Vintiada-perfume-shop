@@ -1,16 +1,27 @@
 import { Header } from "../../components/Header";
 import { useState, useEffect } from "react";
 import "./CartPage.css"
+import { addToCart } from "../../utils/cartUtils.js";
 export function CartPage() {
     const [cart, setCart] = useState(null)
     useEffect(() => {
         const fetchCart = async () => {
-            const response = await fetch("/cart.json")
+            const response = await fetch('http://localhost:3001/api/cart')
             const data = await response.json();
             setCart(data)
         }
         fetchCart()
-    })
+    }, [])
+    const handleAddToCart = async (product) => {
+        try {
+           const updated = await addToCart(product)
+           setCart(updated)
+            
+        }
+        catch (error) {
+            console.log("failes to add to cart", error)
+        }
+    }
     return (
         <>
             <Header></Header>
@@ -31,7 +42,7 @@ export function CartPage() {
                                 <div className="quantity-container">
                                     <button className="minus">-</button>
                                     <span className="quantity">1</span>
-                                    <button className="plus">+</button>
+                                    <button onClick={() => {handleAddToCart(c)}} className="plus">+</button>
                                 </div>
                                 <div className="delete">Delete</div>
                             </div>
