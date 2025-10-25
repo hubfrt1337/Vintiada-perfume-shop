@@ -24,7 +24,9 @@
         },
         "category": "floral",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 10000
     },
     {
         "id": 2,
@@ -50,7 +52,9 @@
         },
         "category": "woody",
         "gender": "masculine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 11000
     },
     {
         "id": 3,
@@ -76,7 +80,9 @@
         },
         "category": "oriental",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 16000
     },
     {
         "id": 4,
@@ -100,7 +106,9 @@
         },
         "category": "amber",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 12000
     },
     {
         "id": 5,
@@ -124,7 +132,9 @@
         },
         "category": "floral",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 14000
     },
     {
         "id": 6,
@@ -149,7 +159,9 @@
         },
         "category": "oriental",
         "gender": "masculine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 11500
     },
     {
         "id": 7,
@@ -173,7 +185,9 @@
         },
         "category": "fresh",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 6000
     },
     {
         "id": 8,
@@ -197,7 +211,9 @@
         },
         "category": "floral",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 15000
     },
     {
         "id": 9,
@@ -221,7 +237,9 @@
         },
         "category": "aquatic",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 4500
     },
     {
         "id": 10,
@@ -245,7 +263,9 @@
         },
         "category": "floral",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 4,
+        "price": 10500
     },
     {
         "id": 11,
@@ -269,7 +289,9 @@
         },
         "category": "leather",
         "gender": "masculine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 4,
+        "price": 9800
     },
     {
         "id": 12,
@@ -293,7 +315,9 @@
         },
         "category": "tropical",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 8000
     },
     {
         "id": 13,
@@ -317,7 +341,9 @@
         },
         "category": "spicy",
         "gender": "masculine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 13000
     },
     {
         "id": 14,
@@ -341,7 +367,9 @@
         },
         "category": "powdery",
         "gender": "feminine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 9500
     },
     {
         "id": 15,
@@ -365,7 +393,9 @@
         },
         "category": "woody",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 13500
     },
     {
         "id": 16,
@@ -389,7 +419,9 @@
         },
         "category": "amber floral",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 14000
     },
     {
         "id": 17,
@@ -413,7 +445,9 @@
         },
         "category": "woody",
         "gender": "masculine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 4,
+        "price": 8500
     },
     {
         "id": 18,
@@ -437,7 +471,9 @@
         },
         "category": "fruity floral",
         "gender": "feminine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 9000
     },
     {
         "id": 19,
@@ -461,7 +497,9 @@
         },
         "category": "oriental",
         "gender": "unisex",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 22000
     },
     {
         "id": 20,
@@ -485,7 +523,9 @@
         },
         "category": "citrus",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 8500
     },
     {
         "id": 21,
@@ -509,7 +549,9 @@
         },
         "category": "floral",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 9500
     },
     {
         "id": 22,
@@ -533,7 +575,9 @@
         },
         "category": "amber spicy",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 5,
+        "price": 18000
     },
     {
         "id": 23,
@@ -557,7 +601,9 @@
         },
         "category": "gourmand",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 20000
     },
     {
         "id": 24,
@@ -581,7 +627,9 @@
         },
         "category": "fresh",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 9000
     },
     {
         "id": 25,
@@ -605,7 +653,9 @@
         },
         "category": "floral green",
         "gender": "feminine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 8500
     },
     {
         "id": 26,
@@ -629,7 +679,9 @@
         },
         "category": "earthy",
         "gender": "unisex",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 16000
     },
     {
         "id": 27,
@@ -653,7 +705,9 @@
         },
         "category": "citrus spicy",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 7000
     },
     {
         "id": 28,
@@ -677,7 +731,9 @@
         },
         "category": "powdery floral",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 4,
+        "price": 8500
     },
     {
         "id": 29,
@@ -701,7 +757,9 @@
         },
         "category": "green woody",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 14000
     },
     {
         "id": 30,
@@ -725,7 +783,9 @@
         },
         "category": "citrus floral",
         "gender": "feminine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 5,
+        "price": 18000
     },
     {
         "id": 31,
@@ -749,7 +809,9 @@
         },
         "category": "woody spicy",
         "gender": "masculine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 3,
+        "price": 2500
     },
     {
         "id": 32,
@@ -773,7 +835,9 @@
         },
         "category": "powdery floral",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 4,
+        "price": 12000
     },
     {
         "id": 33,
@@ -797,7 +861,9 @@
         },
         "category": "amber smoky",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 12000
     },
     {
         "id": 34,
@@ -821,7 +887,9 @@
         },
         "category": "herbal fresh",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 11000
     },
     {
         "id": 35,
@@ -845,7 +913,9 @@
         },
         "category": "floral woody",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 14000
     },
     {
         "id": 36,
@@ -869,7 +939,9 @@
         },
         "category": "fresh aromatic",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 6500
     },
     {
         "id": 37,
@@ -893,7 +965,9 @@
         },
         "category": "floral chypre",
         "gender": "feminine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 9000
     },
     {
         "id": 38,
@@ -917,7 +991,9 @@
         },
         "category": "woody aromatic",
         "gender": "masculine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 3,
+        "price": 7000
     },
     {
         "id": 39,
@@ -941,7 +1017,9 @@
         },
         "category": "citrus floral",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 13000
     },
     {
         "id": 40,
@@ -965,7 +1043,9 @@
         },
         "category": "oriental woody",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 17000
     },
     {
         "id": 41,
@@ -989,7 +1069,9 @@
         },
         "category": "green aromatic",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 9500
     },
     {
         "id": 42,
@@ -1013,7 +1095,9 @@
         },
         "category": "fruity floral",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 3,
+        "price": 3500
     },
     {
         "id": 43,
@@ -1037,7 +1121,9 @@
         },
         "category": "aquatic mineral",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 12000
     },
     {
         "id": 44,
@@ -1061,7 +1147,9 @@
         },
         "category": "woody aromatic",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 16000
     },
     {
         "id": 45,
@@ -1085,7 +1173,9 @@
         },
         "category": "green fruity",
         "gender": "unisex",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 4,
+        "price": 13500
     },
     {
         "id": 46,
@@ -1109,7 +1199,9 @@
         },
         "category": "floral spicy",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 15000
     },
     {
         "id": 47,
@@ -1133,7 +1225,9 @@
         },
         "category": "fresh aquatic",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 4000
     },
     {
         "id": 48,
@@ -1157,7 +1251,9 @@
         },
         "category": "floral smoky",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 14000
     },
     {
         "id": 49,
@@ -1181,7 +1277,9 @@
         },
         "category": "citrus floral",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 4,
+        "price": 11000
     },
     {
         "id": 50,
@@ -1205,7 +1303,9 @@
         },
         "category": "amber aromatic",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 9000
     },
     {
         "id": 51,
@@ -1229,7 +1329,9 @@
         },
         "category": "woody oriental",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 6000
     },
     {
         "id": 52,
@@ -1253,7 +1355,9 @@
         },
         "category": "fruity floral",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 4,
+        "price": 6500
     },
     {
         "id": 53,
@@ -1277,7 +1381,9 @@
         },
         "category": "spicy gourmand",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 7000
     },
     {
         "id": 54,
@@ -1301,7 +1407,9 @@
         },
         "category": "aquatic aromatic",
         "gender": "masculine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 4,
+        "price": 7500
     },
     {
         "id": 55,
@@ -1325,7 +1433,9 @@
         },
         "category": "floral oriental",
         "gender": "feminine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 8000
     },
     {
         "id": 56,
@@ -1349,7 +1459,9 @@
         },
         "category": "citrus aromatic",
         "gender": "masculine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 3,
+        "price": 6000
     },
     {
         "id": 57,
@@ -1373,7 +1485,9 @@
         },
         "category": "amber floral",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 5,
+        "price": 20000
     },
     {
         "id": 58,
@@ -1397,7 +1511,9 @@
         },
         "category": "citrus fresh",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 3,
+        "price": 6000
     },
     {
         "id": 59,
@@ -1421,7 +1537,9 @@
         },
         "category": "floral spicy",
         "gender": "feminine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 5,
+        "price": 16000
     },
     {
         "id": 60,
@@ -1445,7 +1563,9 @@
         },
         "category": "green woody",
         "gender": "masculine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 5,
+        "price": 18000
     },
     {
         "id": 61,
@@ -1469,7 +1589,9 @@
         },
         "category": "gourmand powdery",
         "gender": "unisex",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 4,
+        "price": 8000
     },
     {
         "id": 62,
@@ -1493,7 +1615,9 @@
         },
         "category": "floral metallic",
         "gender": "feminine",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 14000
     },
     {
         "id": 63,
@@ -1517,7 +1641,9 @@
         },
         "category": "woody fresh",
         "gender": "masculine",
-        "bestseller": true
+        "bestseller": true,
+        "stars": 4,
+        "price": 13000
     },
     {
         "id": 64,
@@ -1541,6 +1667,8 @@
         },
         "category": "citrus floral",
         "gender": "unisex",
-        "bestseller": false
+        "bestseller": false,
+        "stars": 4,
+        "price": 15000
     }
 ]
