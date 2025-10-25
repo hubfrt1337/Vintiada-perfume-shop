@@ -10,7 +10,6 @@ import { Arrivals } from "./Arrivals"
 import "./HomePage.css"
 import { Adv } from "./Advertisements"
 import { useOutletContext } from "react-router"
-import { useRef } from "react"
 export function HomePage(){
     useEffect(() => {
         document.title = "Vintiada"

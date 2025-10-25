@@ -9,6 +9,7 @@ import { Woody } from './pages/Woody.jsx'
 import { Fresh } from './pages/Fresh.jsx'
 import { Oriental } from './pages/Oriental.jsx'
 import { Floral } from './pages/Floral.jsx'
+import { CartPage } from './pages/cartPage/CartPage.jsx'
 import './index.css'
 import App from './App.jsx'
 const router = createBrowserRouter([
@@ -50,7 +51,10 @@ const router = createBrowserRouter([
       },
     ]
   },
-
+  {
+    path: "/cart",
+    element: <CartPage></CartPage>
+  }
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>

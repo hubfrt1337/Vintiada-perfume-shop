@@ -21,7 +21,8 @@ export function Header({perfumes}) {
                         <VscAccount className="icons-header"/>
                     </div>
                     <div className="cart-container">
-                        <IoCartOutline className="icons-header"/>
+                        <NavLink to="/cart">
+                        <IoCartOutline className="icons-header"/></NavLink>
                     </div>
                 </div>
             </nav>
