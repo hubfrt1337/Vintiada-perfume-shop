@@ -1,7 +1,7 @@
 import { Header } from "../../components/Header";
 import { useState, useEffect } from "react";
 import "./CartPage.css"
-import { addToCart } from "../../utils/cartUtils.js";
+import { addToCart, subtractFromCart } from "../../utils/cartUtils.js";
 export function CartPage() {
     const [cart, setCart] = useState(null)
     useEffect(() => {
@@ -11,7 +11,7 @@ export function CartPage() {
             setCart(data)
         }
         fetchCart()
-    }, [])
+    }, [cart])
     const handleAddToCart = async (product) => {
         try {
            const updated = await addToCart(product)
@@ -20,6 +20,16 @@ export function CartPage() {
         }
         catch (error) {
             console.log("failes to add to cart", error)
+        }
+    }
+    const handleSubtractCart = async (product) => {
+        try {
+            const updated = await subtractFromCart(product);
+            setCart(updated)
+            console.log("funkcja działą")
+        }
+        catch (error){
+            console.log("Failed to subtrack product from cart", error)
         }
     }
     return (
@@ -40,7 +50,9 @@ export function CartPage() {
 
                                 <div className="product-page-price">{(c.price / 100).toFixed(2)}$</div>
                                 <div className="quantity-container">
-                                    <button className="minus">-</button>
+                                    <button onClick={() => {
+                                    handleSubtractCart(c)
+                                }} className="minus">-</button>
                                     <span className="quantity">1</span>
                                     <button onClick={() => {handleAddToCart(c)}} className="plus">+</button>
                                 </div>

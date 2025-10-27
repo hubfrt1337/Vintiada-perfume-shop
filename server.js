@@ -32,5 +32,26 @@ app.put('/api/cart', async (req, res) => {
     res.status(500).json({ error: 'Cannot write cart' });
   }
 });
+app.delete("/api/cart/:id", async (req, res) => {
+  try {
+   const id = parseInt(req.params.id)  ;
+   if (Number.isNaN(id)) return res.status(400).json({error: "Invalid Id"})
+  
+  const raw = await fs.readFile(CART_PATH, 'utf8')
+  const cart = raw ? JSON.parse(raw) : [];
+  
+  const index = cart.findIndex(item => item.id === id)
+  if(index === -1) return res.status(404).json({error: "Item not found"})
+
+    cart.splice(index, 1)
+
+    await fs.writeFile(CART_PATH, JSON.stringify(cart, null, 2), "utf8" )
+    return res.json(cart)
+  }
+  catch (err) {
+    console.log("Error deleting cart item:", err)
+    res.status(500).json({error: 'Cannot delete card'})
+  }
+})
 
 app.listen(3001, () => console.log('API server listening on http://localhost:3001'));
