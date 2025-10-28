@@ -38,7 +38,7 @@ export function CartPage() {
     }
     function calculate(){
         if(cart){
-            const numbers = cart.map(c => c.price)
+            const numbers = cart.map(c => c.price * c.quantity)
             const total = numbers.reduce((accumulator, currentValue) => accumulator + currentValue)
             return  ( cost + (total / 100)).toFixed(2)
         }
