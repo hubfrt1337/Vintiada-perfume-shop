@@ -2,6 +2,7 @@ import { Header } from "../../components/Header";
 import { useState, useEffect } from "react";
 import "./CartPage.css"
 import { addToCart, subtractFromCart } from "../../utils/cartUtils.js";
+import { EmptyCart } from "../../components/EmptyCart.jsx";
 export function CartPage() {
     const [cart, setCart] = useState([])
     const [cost, setCost] = useState(3.99)
@@ -60,7 +61,7 @@ export function CartPage() {
     return (
         <>
             <Header></Header>
-            {cart.length > 0 && <div className="cart-page-container">
+            {cart.length > 0 ? <div className="cart-page-container">
                 {cart && cart.map(c => {
                     return (
                         <div key={c.id} className="product-page-info">
@@ -108,9 +109,9 @@ export function CartPage() {
                 <div className="payment-summary">
                     <p className="pay-text">payment-summary:</p>
                     <div className="pay-cost">{calculate()}$ <button onClick={order}>Order</button></div>
-
                 </div>
             </div>
+            : <EmptyCart></EmptyCart>
             }
         </>
     )
