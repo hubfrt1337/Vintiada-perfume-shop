@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./CartPage.css"
 import { addToCart, subtractFromCart } from "../../utils/cartUtils.js";
 export function CartPage() {
-    const [cart, setCart] = useState(null)
+    const [cart, setCart] = useState([])
     const [cost, setCost] = useState(3.99)
     useEffect(() => {
         const fetchCart = async () => {
@@ -37,11 +37,18 @@ export function CartPage() {
         setCost(Number(e.target.value))
     }
     function calculate(){
-        if(cart){
+        if(cart.length > 0){
             const numbers = cart.map(c => c.price * c.quantity)
             const total = numbers.reduce((accumulator, currentValue) => accumulator + currentValue)
             return  ( cost + (total / 100)).toFixed(2)
         }
+    }
+    const order = async () => {
+        const response = await fetch('http://localhost:3001/api/cart', {
+            method: "DELETE"
+        })
+        const updated = await response.json()
+        setCart(updated)
     }
     calculate()
     return (
@@ -94,7 +101,7 @@ export function CartPage() {
                 </div>
                 <div className="payment-summary">
                     <p className="pay-text">payment-summary:</p>
-                    <div className="pay-cost">{calculate()}$ <button>Order</button></div>
+                    <div className="pay-cost">{calculate()}$ <button onClick={order}>Order</button></div>
                     
                 </div>
             </div>

@@ -43,7 +43,7 @@ export const subtractFromCart = async (product,) => {
 
     }
     else if(existing.quantity === 1){
-      const delRes = await fetch(`http://localhost:3001/api/cart/${product.id}`, {
+      const delRes = await fetch(`http://localhost:3001/api/cart/${product.id}?`, {
         method: "DELETE",
         headers: {"Content-Type": "application/json"}
       })

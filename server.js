@@ -32,8 +32,22 @@ app.put('/api/cart', async (req, res) => {
     res.status(500).json({ error: 'Cannot write cart' });
   }
 });
+
+app.delete("/api/cart", async (req, res) => {
+  try {
+    await fs.writeFile(CART_PATH, JSON.stringify([], null, 2), "utf8")
+    return res.json([])
+  }
+  catch (err) {
+    res.status(500).json({error: "cannot delete card"})
+  }
+})
+
+app.listen(3001, () => console.log('API server listening on http://localhost:3001'));
+
 app.delete("/api/cart/:id", async (req, res) => {
   try {
+    
    const id = parseInt(req.params.id)  ;
    if (Number.isNaN(id)) return res.status(400).json({error: "Invalid Id"})
   
@@ -42,7 +56,6 @@ app.delete("/api/cart/:id", async (req, res) => {
   
   const index = cart.findIndex(item => item.id === id)
   if(index === -1) return res.status(404).json({error: "Item not found"})
-
     cart.splice(index, 1)
 
     await fs.writeFile(CART_PATH, JSON.stringify(cart, null, 2), "utf8" )
@@ -54,4 +67,3 @@ app.delete("/api/cart/:id", async (req, res) => {
   }
 })
 
-app.listen(3001, () => console.log('API server listening on http://localhost:3001'));
