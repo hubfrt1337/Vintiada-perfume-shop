@@ -36,11 +36,11 @@ export function CartPage() {
     function checkInputs(e) {
         setCost(Number(e.target.value))
     }
-    function calculate(){
-        if(cart.length > 0){
+    function calculate() {
+        if (cart.length > 0) {
             const numbers = cart.map(c => c.price * c.quantity)
             const total = numbers.reduce((accumulator, currentValue) => accumulator + currentValue)
-            return  ( cost + (total / 100)).toFixed(2)
+            return (cost + (total / 100)).toFixed(2)
         }
     }
     const order = async () => {
@@ -50,11 +50,17 @@ export function CartPage() {
         const updated = await response.json()
         setCart(updated)
     }
-    calculate()
+    const deleteProduct = async (product) => {
+        const response = await fetch(`http://localhost:3001/api/cart/${product.id}`, {
+            method: "DELETE"
+        })
+        const updated = await response.json()
+        setCart(updated)
+    }
     return (
         <>
             <Header></Header>
-            <div className="cart-page-container">
+            {cart.length > 0 && <div className="cart-page-container">
                 {cart && cart.map(c => {
                     return (
                         <div key={c.id} className="product-page-info">
@@ -75,7 +81,7 @@ export function CartPage() {
                                     <span className="quantity">{c.quantity}</span>
                                     <button onClick={() => { handleAddToCart(c) }} className="plus">+</button>
                                 </div>
-                                <div className="delete">Delete</div>
+                                <div onClick={() => {deleteProduct(c)}} className="delete">Delete</div>
                             </div>
                         </div>
                     )
@@ -102,9 +108,10 @@ export function CartPage() {
                 <div className="payment-summary">
                     <p className="pay-text">payment-summary:</p>
                     <div className="pay-cost">{calculate()}$ <button onClick={order}>Order</button></div>
-                    
+
                 </div>
             </div>
+            }
         </>
     )
 }
