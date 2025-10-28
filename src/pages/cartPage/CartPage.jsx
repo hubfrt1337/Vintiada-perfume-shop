@@ -4,7 +4,7 @@ import "./CartPage.css"
 import { addToCart, subtractFromCart } from "../../utils/cartUtils.js";
 export function CartPage() {
     const [cart, setCart] = useState(null)
-    const [cost, setCost] = useState(0)
+    const [cost, setCost] = useState(3.99)
     useEffect(() => {
         const fetchCart = async () => {
             const response = await fetch('http://localhost:3001/api/cart')
@@ -40,7 +40,7 @@ export function CartPage() {
         if(cart){
             const numbers = cart.map(c => c.price)
             const total = numbers.reduce((accumulator, currentValue) => accumulator + currentValue)
-            return (total / 100).toFixed(2)
+            return  ( cost + (total / 100)).toFixed(2)
         }
     }
     calculate()
@@ -79,7 +79,7 @@ export function CartPage() {
                 <div className="order-date-container">
                     <div className="order-date">25 January 2025</div>
                     <div className="order-cost">Cost: 3.99$</div>
-                    <input name="cost" value="3.99" onChange={checkInputs} className="input-check" type="radio" ></input>
+                    <input name="cost" defaultChecked={true} value="3.99" onChange={checkInputs} className="input-check" type="radio" ></input>
                 </div>
                 <div className="order-date-container">
                     <div className="order-date">25 January 2025</div>
@@ -93,8 +93,9 @@ export function CartPage() {
                         className="input-check" type="radio" ></input>
                 </div>
                 <div className="payment-summary">
-                    <div>payment-summary</div>
-                    <div>{calculate()}</div>
+                    <p className="pay-text">payment-summary:</p>
+                    <div className="pay-cost">{calculate()}$ <button>Order</button></div>
+                    
                 </div>
             </div>
         </>
