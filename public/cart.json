@@ -24,7 +24,7 @@
     "bestseller": false,
     "stars": 4,
     "price": 8500,
-    "quantity": 3
+    "quantity": 6
   },
   {
     "id": 1,
@@ -54,6 +54,6 @@
     "bestseller": true,
     "stars": 5,
     "price": 10000,
-    "quantity": 2
+    "quantity": 3
   }
 ]

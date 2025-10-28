@@ -12,12 +12,12 @@ export function CartPage() {
             setCart(data)
         }
         fetchCart()
-    }, [cart])
+    }, [])
     const handleAddToCart = async (product) => {
         try {
-           const updated = await addToCart(product)
-           setCart(updated)
-            
+            const updated = await addToCart(product)
+            setCart(updated)
+
         }
         catch (error) {
             console.log("failes to add to cart", error)
@@ -29,13 +29,21 @@ export function CartPage() {
             setCart(updated)
             console.log("funkcja działą")
         }
-        catch (error){
+        catch (error) {
             console.log("Failed to subtrack product from cart", error)
         }
     }
-    function checkInputs(e){
+    function checkInputs(e) {
         setCost(Number(e.target.value))
     }
+    function calculate(){
+        if(cart){
+            const numbers = cart.map(c => c.price)
+            const total = numbers.reduce((accumulator, currentValue) => accumulator + currentValue)
+            return (total / 100).toFixed(2)
+        }
+    }
+    calculate()
     return (
         <>
             <Header></Header>
@@ -55,10 +63,10 @@ export function CartPage() {
                                 <div className="product-page-price">{(c.price / 100).toFixed(2)}$</div>
                                 <div className="quantity-container">
                                     <button onClick={() => {
-                                    handleSubtractCart(c)
-                                }} className="minus">-</button>
-                                    <span className="quantity">1</span>
-                                    <button onClick={() => {handleAddToCart(c)}} className="plus">+</button>
+                                        handleSubtractCart(c)
+                                    }} className="minus">-</button>
+                                    <span className="quantity">{c.quantity}</span>
+                                    <button onClick={() => { handleAddToCart(c) }} className="plus">+</button>
                                 </div>
                                 <div className="delete">Delete</div>
                             </div>
@@ -71,18 +79,22 @@ export function CartPage() {
                 <div className="order-date-container">
                     <div className="order-date">25 January 2025</div>
                     <div className="order-cost">Cost: 3.99$</div>
-                    <input name="cost" value="3.99" className="input-check" type="radio" ></input>
+                    <input name="cost" value="3.99" onChange={checkInputs} className="input-check" type="radio" ></input>
                 </div>
                 <div className="order-date-container">
                     <div className="order-date">25 January 2025</div>
                     <div className="order-cost">Cost: 5.99$</div>
-                    <input name="cost" value="5.99" className="input-check" type="radio"  ></input>
+                    <input name="cost" value="5.99" onChange={checkInputs} className="input-check" type="radio"  ></input>
                 </div>
                 <div className="order-date-container">
                     <div className="order-date">25 January 2025</div>
                     <div className="order-cost">Cost: 6.99$</div>
-                    <input name="cost" value="6.99"  onChange={checkInputs}
-                     className="input-check"  type="radio" ></input>
+                    <input name="cost" value="6.99" onChange={checkInputs}
+                        className="input-check" type="radio" ></input>
+                </div>
+                <div className="payment-summary">
+                    <div>payment-summary</div>
+                    <div>{calculate()}</div>
                 </div>
             </div>
         </>
