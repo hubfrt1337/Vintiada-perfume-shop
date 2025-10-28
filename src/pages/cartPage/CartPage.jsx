@@ -4,6 +4,7 @@ import "./CartPage.css"
 import { addToCart, subtractFromCart } from "../../utils/cartUtils.js";
 export function CartPage() {
     const [cart, setCart] = useState(null)
+    const [cost, setCost] = useState(0)
     useEffect(() => {
         const fetchCart = async () => {
             const response = await fetch('http://localhost:3001/api/cart')
@@ -31,6 +32,9 @@ export function CartPage() {
         catch (error){
             console.log("Failed to subtrack product from cart", error)
         }
+    }
+    function checkInputs(e){
+        setCost(Number(e.target.value))
     }
     return (
         <>
@@ -61,6 +65,25 @@ export function CartPage() {
                         </div>
                     )
                 })}
+                <div className="order-summary">
+                    <div className="delivery-title">Delivery options:</div>
+                </div>
+                <div className="order-date-container">
+                    <div className="order-date">25 January 2025</div>
+                    <div className="order-cost">Cost: 3.99$</div>
+                    <input name="cost" value="3.99" className="input-check" type="radio" ></input>
+                </div>
+                <div className="order-date-container">
+                    <div className="order-date">25 January 2025</div>
+                    <div className="order-cost">Cost: 5.99$</div>
+                    <input name="cost" value="5.99" className="input-check" type="radio"  ></input>
+                </div>
+                <div className="order-date-container">
+                    <div className="order-date">25 January 2025</div>
+                    <div className="order-cost">Cost: 6.99$</div>
+                    <input name="cost" value="6.99"  onChange={checkInputs}
+                     className="input-check"  type="radio" ></input>
+                </div>
             </div>
         </>
     )

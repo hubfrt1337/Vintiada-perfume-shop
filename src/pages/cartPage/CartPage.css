@@ -76,3 +76,35 @@
 .plus{
     color: black;
 }
+
+
+
+
+.order-summary{
+
+
+}
+
+.delivery-title{
+    padding: 1rem;
+    font-size: 2rem;
+    border-bottom: 1px solid grey;
+}
+.order-date-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+.order-date{
+    font-size: 1.2rem;
+}
+.order-cost{
+
+}
+.input-check{
+    border-radius: 30px;
+    border: none;
+}
