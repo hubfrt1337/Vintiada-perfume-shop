@@ -17,7 +17,7 @@ export function BestsellersPerfum({ perfum }) {
 
     }
     const controlledInput = (e) => {
-        setQuantity(e.target.value)
+        setQuantity(Number(e.target.value))
     }
     return (
         <div className="flex-best" >
