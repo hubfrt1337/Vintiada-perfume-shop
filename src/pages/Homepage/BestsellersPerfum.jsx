@@ -1,8 +1,8 @@
-import { useState , useContext} from "react"
+import { useState } from "react"
 import { addToCart } from "../../utils/cartUtils"
-import { CartContext } from "../../App";
+import { useOutletContext } from "react-router"
 export function BestsellersPerfum({ perfum }) {
-    const {setCart} = useContext(CartContext);
+    const {setCart} = useOutletContext
     const [quantity, setQuantity] = useState(1)
     const [isEditing, setIsEditing] = useState(false)
     const handleAddToCart = async (product, amount) => {

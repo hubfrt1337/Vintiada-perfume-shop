@@ -1,13 +1,13 @@
 import { Header } from "../../components/Header";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect} from "react";
+import { useOutletContext } from "react-router";
 import "./CartPage.css"
 import { addToCart, subtractFromCart } from "../../utils/cartUtils.js";
 import { EmptyCart } from "../../components/EmptyCart.jsx";
-import { useOutletContext } from "react-router";
-import { CartContext } from "../../App.jsx";
+
 
 export function CartPage() {
-    const {cart, setCart} = useContext(CartContext)
+    const {cart, setCart} = useOutletContext()
     const [cost, setCost] = useState(3.99)
     useEffect(() => {
         const fetchCart = async () => {

@@ -100,6 +100,7 @@
 }
 .quantity-div{
     width: 25px;
+    text-decoration: underline 2px green;
 }
 
 input[type=number] {
