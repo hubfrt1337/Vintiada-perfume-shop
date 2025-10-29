@@ -2,7 +2,10 @@ import "./Bestsellers.css"
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { useRef } from "react";
+import { useState } from "react";
+import { BestsellersPerfum } from "./BestsellersPerfum";
 export function BestSellers({ perfumes }) {
+    
     const wrapper = useRef(null)
     const moveProducts = (direction) => {
         if(wrapper.current){
@@ -14,7 +17,7 @@ export function BestSellers({ perfumes }) {
     }
     const bestsellers = perfumes.filter(perfum => perfum.bestseller)
         .sort(() => 0.5 - Math.random()).slice(0, 6)
-
+    
     return (
         <div className="best-sellers-container">
             <div className="title-best">Best Sellers</div>
@@ -25,20 +28,7 @@ export function BestSellers({ perfumes }) {
                 <div ref={wrapper} className="perfumes-container">
                     {bestsellers.map(perfum => {
                         return (
-                            <div className="flex-best" key={perfum.id}>
-                                <div className="image-container">
-                                    <img src={perfum.image}></img>
-                                </div>
-                                <div className="perfum-brand child">{perfum.brand}</div>
-                                <div className="perfum-name child">{perfum.name}</div>
-                                <div className="perfum-type child">{perfum.gender === "unisex"
-                                    ? "Perfume for Everyone"
-                                    : perfum.gender === "feminine"
-                                        ? "Perfume for Women"
-                                        : "Perfume for Men"}</div>
-                                <div className="stars-container"><img src={`/rating-${perfum.stars}.png`}></img></div>
-                                <div>{(perfum.price / 100).toFixed(2)}$</div>
-                            </div>
+                            <BestsellersPerfum key={perfum.id} perfum={perfum}></BestsellersPerfum>
                         )
                     })}
                 </div>
