@@ -1,7 +1,21 @@
-import { useState } from "react"
+import { useState , useContext} from "react"
+import { addToCart } from "../../utils/cartUtils"
+import { CartContext } from "../../App";
 export function BestsellersPerfum({ perfum }) {
+    const {setCart} = useContext(CartContext);
     const [quantity, setQuantity] = useState(1)
     const [isEditing, setIsEditing] = useState(false)
+    const handleAddToCart = async (product, amount) => {
+       
+       try { 
+        const response = await addToCart(product, amount)
+        setCart(response)
+       }
+       catch (error){
+        console.log(error)
+       }
+
+    }
     const controlledInput = (e) => {
         setQuantity(e.target.value)
     }
@@ -34,7 +48,10 @@ export function BestsellersPerfum({ perfum }) {
                     </>
                 ) }
 
-                <button className="add-btn">Add</button>
+                <button 
+                className="add-btn"
+                onClick={() => {handleAddToCart(perfum, quantity)}}
+                >Add</button>
             </div>
         </div>
     )

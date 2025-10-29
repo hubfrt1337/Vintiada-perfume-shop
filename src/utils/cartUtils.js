@@ -1,11 +1,14 @@
-export const addToCart = async (product) => {
+export const addToCart = async (product, quantity) => {
   try {
+    if(!quantity) {
+      quantity = 1;
+    }
     const res = await fetch('http://localhost:3001/api/cart');
     const currentCart = await res.json();
 
     const existing = currentCart.find(item => item.id === product.id);
-    if (existing) existing.quantity = (existing.quantity || 0) + 1;
-    else currentCart.push({ ...product, quantity: 1 });
+    if (existing) existing.quantity = (existing.quantity || 0) + quantity;
+    else currentCart.push({ ...product, quantity: quantity });
 
     const saveRes = await fetch('http://localhost:3001/api/cart', {
       method: 'PUT',

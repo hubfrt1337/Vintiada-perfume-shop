@@ -1,10 +1,13 @@
 import { Header } from "../../components/Header";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./CartPage.css"
 import { addToCart, subtractFromCart } from "../../utils/cartUtils.js";
 import { EmptyCart } from "../../components/EmptyCart.jsx";
+import { useOutletContext } from "react-router";
+import { CartContext } from "../../App.jsx";
+
 export function CartPage() {
-    const [cart, setCart] = useState([])
+    const {cart, setCart} = useContext(CartContext)
     const [cost, setCost] = useState(3.99)
     useEffect(() => {
         const fetchCart = async () => {
@@ -28,7 +31,6 @@ export function CartPage() {
         try {
             const updated = await subtractFromCart(product);
             setCart(updated)
-            console.log("funkcja działą")
         }
         catch (error) {
             console.log("Failed to subtrack product from cart", error)

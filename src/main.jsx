@@ -49,6 +49,10 @@ const router = createBrowserRouter([
         path: "/oriental",
         element: <Oriental></Oriental>
       },
+      {
+        path: "/cart",
+        element: <CartPage></CartPage>
+      }
     ]
   },
   {
