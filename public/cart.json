@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "id": 26,
+    "name": "Smoked Fig",
+    "image": "/durga.jpg",
+    "brand": "DS & Durga",
+    "type": "EDP",
+    "notes": {
+      "top": [
+        "fig",
+        "black tea"
+      ],
+      "heart": [
+        "iris",
+        "cedar"
+      ],
+      "base": [
+        "smoke",
+        "resins"
+      ]
+    },
+    "category": "earthy",
+    "gender": "unisex",
+    "bestseller": true,
+    "stars": 5,
+    "price": 16000,
+    "quantity": 2
+  },
+  {
+    "id": 42,
+    "name": "Blush Nectar",
+    "image": "/nectar.jpg",
+    "brand": "Victoria's Secret",
+    "type": "EDP",
+    "notes": {
+      "top": [
+        "peach",
+        "nectarine"
+      ],
+      "heart": [
+        "magnolia",
+        "rose"
+      ],
+      "base": [
+        "vanilla",
+        "cashmere wood"
+      ]
+    },
+    "category": "fruity floral",
+    "gender": "feminine",
+    "bestseller": true,
+    "stars": 3,
+    "price": 3500,
+    "quantity": 1
+  }
+]

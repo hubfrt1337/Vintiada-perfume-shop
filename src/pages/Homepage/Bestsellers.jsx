@@ -2,7 +2,6 @@ import "./Bestsellers.css"
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { useRef } from "react";
-import { useState } from "react";
 import { BestsellersPerfum } from "./BestsellersPerfum";
 export function BestSellers({ perfumes }) {
     
