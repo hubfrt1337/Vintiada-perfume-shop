@@ -14,6 +14,14 @@ function App() {
         }
         fetchPerfumes()
     }, [])
+    useEffect(() => {
+        const fetchCart = async () => {
+            const response = await fetch('http://localhost:3001/api/cart')
+            const data = await response.json();
+            setCart(data)
+        }
+        fetchCart()
+    }, [])
   return (
     <>
     <Outlet context={{perfumes, setPerfumes, cart, setCart}}></Outlet>

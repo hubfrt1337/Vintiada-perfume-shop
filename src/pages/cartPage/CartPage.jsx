@@ -1,5 +1,5 @@
 import { Header } from "../../components/Header";
-import { useState, useEffect} from "react";
+import { useState} from "react";
 import { useOutletContext } from "react-router";
 import "./CartPage.css"
 import { addToCart, subtractFromCart } from "../../utils/cartUtils.js";
@@ -9,14 +9,7 @@ import { EmptyCart } from "../../components/EmptyCart.jsx";
 export function CartPage() {
     const {cart, setCart} = useOutletContext()
     const [cost, setCost] = useState(3.99)
-    useEffect(() => {
-        const fetchCart = async () => {
-            const response = await fetch('http://localhost:3001/api/cart')
-            const data = await response.json();
-            setCart(data)
-        }
-        fetchCart()
-    }, [setCart])
+    
     const dates = [
         new Date().toDateString(),
         new Date(new Date().setTime(new Date().getTime() + (72 * 60 * 60 * 1000))).toDateString(),
