@@ -98,7 +98,7 @@ export function CartPage() {
                     <div className="delivery-title">Delivery options:</div>
                 </div>
                 <div className="order-date-container">
-                    <div className="order-date">{dates[0]}</div>
+                    <div className="order-date">{dates[2]}</div>
                     <div className="order-cost">Cost: 3.99$</div>
                     <input name="cost" defaultChecked={true} value="3.99" onChange={checkInputs} className="input-check" type="radio" ></input>
                 </div>
@@ -108,7 +108,7 @@ export function CartPage() {
                     <input name="cost" value="5.99" onChange={checkInputs} className="input-check" type="radio"  ></input>
                 </div>
                 <div className="order-date-container">
-                    <div className="order-date">{dates[2]}</div>
+                    <div className="order-date">{dates[0]}</div>
                     <div className="order-cost">Cost: 6.99$</div>
                     <input name="cost" value="6.99" onChange={checkInputs}
                         className="input-check" type="radio" ></input>
