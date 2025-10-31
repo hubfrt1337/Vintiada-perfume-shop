@@ -16,7 +16,12 @@ export function CartPage() {
             setCart(data)
         }
         fetchCart()
-    }, [])
+    }, [setCart])
+    const dates = [
+        new Date().toDateString(),
+        new Date(new Date().setTime(new Date().getTime() + (72 * 60 * 60 * 1000))).toDateString(),
+        new Date(new Date().setTime(new Date().getTime() + (120 * 60 * 60 * 1000))).toDateString(),
+    ]
     const handleAddToCart = async (product) => {
         try {
             const updated = await addToCart(product)
@@ -93,17 +98,17 @@ export function CartPage() {
                     <div className="delivery-title">Delivery options:</div>
                 </div>
                 <div className="order-date-container">
-                    <div className="order-date">25 January 2025</div>
+                    <div className="order-date">{dates[0]}</div>
                     <div className="order-cost">Cost: 3.99$</div>
                     <input name="cost" defaultChecked={true} value="3.99" onChange={checkInputs} className="input-check" type="radio" ></input>
                 </div>
                 <div className="order-date-container">
-                    <div className="order-date">25 January 2025</div>
+                    <div className="order-date">{dates[1]}</div>
                     <div className="order-cost">Cost: 5.99$</div>
                     <input name="cost" value="5.99" onChange={checkInputs} className="input-check" type="radio"  ></input>
                 </div>
                 <div className="order-date-container">
-                    <div className="order-date">25 January 2025</div>
+                    <div className="order-date">{dates[2]}</div>
                     <div className="order-cost">Cost: 6.99$</div>
                     <input name="cost" value="6.99" onChange={checkInputs}
                         className="input-check" type="radio" ></input>
