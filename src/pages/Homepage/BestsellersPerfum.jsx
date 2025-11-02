@@ -22,7 +22,7 @@ export function BestsellersPerfum({ perfum }) {
     }
     return (
         <div className="kontener">
-            <Link style={{textDecoration: "none"}}>
+            <Link to={`/product/${perfum.id}`} style={{textDecoration: "none"}}>
                 <div className="flex-best" >
 
                     <div className="image-container">
@@ -49,7 +49,7 @@ export function BestsellersPerfum({ perfum }) {
                     <>
 
                         <input className="input-quantity" type="number" onChange={controlledInput} value={quantity}></input>
-                        <button className="save-btn" onClick={() => { if (!quantity) { setQuantity(0) } setIsEditing(false) }} >save</button>
+                        <button className="save-btn" onClick={() => { if (!quantity) { setQuantity(1) } setIsEditing(false) }} >save</button>
 
                     </>
                 )}
