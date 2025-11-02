@@ -15,7 +15,7 @@ export function BestSellers({ perfumes }) {
         }
     }
     const bestsellers = perfumes.filter(perfum => perfum.bestseller)
-        .sort(() => 0.5 - Math.random()).slice(0, 6)
+        .slice(0, 6)
     
     return (
         <div className="best-sellers-container">

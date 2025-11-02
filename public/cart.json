@@ -52,5 +52,59 @@
     "stars": 3,
     "price": 3500,
     "quantity": 1
+  },
+  {
+    "id": 8,
+    "name": "Velvet Bloom",
+    "image": "/byredo.jpg",
+    "brand": "Byredo",
+    "type": "EDP",
+    "notes": {
+      "top": [
+        "peony",
+        "raspberry"
+      ],
+      "heart": [
+        "rose",
+        "freesia"
+      ],
+      "base": [
+        "cashmere wood",
+        "amber"
+      ]
+    },
+    "category": "floral",
+    "gender": "feminine",
+    "bestseller": true,
+    "stars": 5,
+    "price": 15000,
+    "quantity": 1
+  },
+  {
+    "id": 10,
+    "name": "Golden Petal",
+    "image": "/golden.webp",
+    "brand": "Gucci",
+    "type": "EDP",
+    "notes": {
+      "top": [
+        "mandarin",
+        "peach"
+      ],
+      "heart": [
+        "rose",
+        "magnolia"
+      ],
+      "base": [
+        "honey",
+        "white musk"
+      ]
+    },
+    "category": "floral",
+    "gender": "feminine",
+    "bestseller": true,
+    "stars": 4,
+    "price": 10500,
+    "quantity": 1
   }
 ]
