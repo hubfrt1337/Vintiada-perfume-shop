@@ -22,7 +22,11 @@ export function Arrivals({ perfumes }) {
                     <FaArrowLeft />
                 </div>
                 <div ref={wrapper} className="perfumes-container">
-                    <ArrivalsPerfum arrivals={arrivals}></ArrivalsPerfum>
+                    {arrivals.map(arrival => {
+                        return (
+                            <ArrivalsPerfum key={arrival.id} perfum={arrival}></ArrivalsPerfum>
+                        )
+                    })}
                 </div>
                 <div className="arrow-right" onClick={() => {moveProducts("right")}}>
                     <FaArrowRight></FaArrowRight>

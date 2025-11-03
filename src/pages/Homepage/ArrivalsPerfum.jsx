@@ -2,7 +2,7 @@ import { useState } from "react"
 import { addToCart } from "../../utils/cartUtils"
 import { useOutletContext } from "react-router"
 
-export function ArrivalsPerfum({ arrivals }) {
+export function ArrivalsPerfum({ perfum }) {
     const { setCart } = useOutletContext()
     const [quantity, setQuantity] = useState(1)
     const [isEditing, setIsEditing] = useState(false)
@@ -22,8 +22,6 @@ export function ArrivalsPerfum({ arrivals }) {
     }
     return (
         <>
-            {arrivals.map(perfum => {
-                return (
                     <div className="flex-best" key={perfum.id}>
                         <div className="image-container">
                             <img src={perfum.image}></img>
@@ -58,8 +56,6 @@ export function ArrivalsPerfum({ arrivals }) {
                             >Add</button>
                         </div>
                     </div>
-                )
-            })}
         </>
     )
 }
