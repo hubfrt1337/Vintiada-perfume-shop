@@ -79,14 +79,16 @@
 .plus{
     color: black;
 }
-
-
-
-
-.order-summary{
-
-
+.absolut{
+    position: absolute;
+    top: 100%;
+    left: 20px;
 }
+.relat{
+    position: relative;
+    
+}
+
 
 .delivery-title{
     padding: 1rem;

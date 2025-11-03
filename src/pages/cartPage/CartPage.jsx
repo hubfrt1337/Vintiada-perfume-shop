@@ -1,11 +1,10 @@
 import { Header } from "../../components/Header";
-import { useState} from "react";
+import {  useState} from "react";
 import { useOutletContext } from "react-router";
 import "./CartPage.css"
 import { addToCart, subtractFromCart } from "../../utils/cartUtils.js";
 import { EmptyCart } from "../../components/EmptyCart.jsx";
-
-
+import { CartSummary } from "./CartSummary.jsx";
 export function CartPage() {
     const {cart, setCart} = useOutletContext()
     const [cost, setCost] = useState(3.99)
@@ -62,31 +61,13 @@ export function CartPage() {
         <>
             <Header></Header>
             {cart.length > 0 ? <div className="cart-page-container">
-                {cart && cart.map(c => {
-                    return (
-                        <div key={c.id} className="product-page-info">
-                            <div className="page-image-container">
-                                <img src={c.image}></img>
-                            </div>
-                            <div className="cart-product-info">
-                                <div>
-                                    <div className="product-page-name">{c.name}</div>
-                                    <div className="product-page-brand">{c.brand}</div>
-                                </div>
-
-                                <div className="product-page-price">{(c.price / 100).toFixed(2)}$</div>
-                                <div className="quantity-container">
-                                    <button onClick={() => {
-                                        handleSubtractCart(c)
-                                    }} className="minus">-</button>
-                                    <span className="quantity">{c.quantity}</span>
-                                    <button onClick={() => { handleAddToCart(c) }} className="plus">+</button>
-                                </div>
-                                <div onClick={() => {deleteProduct(c)}} className="delete">Delete</div>
-                            </div>
-                        </div>
-                    )
-                })}
+                {cart && cart.map(c => 
+                    { return (<CartSummary 
+                    key={c.id}
+                    c={c}
+                    handleAddToCart={handleAddToCart}
+                    deleteProduct={deleteProduct}
+                    handleSubtractCart={handleSubtractCart}></CartSummary>)}) }
                 <div className="order-summary">
                     <div className="delivery-title">Delivery options:</div>
                 </div>
