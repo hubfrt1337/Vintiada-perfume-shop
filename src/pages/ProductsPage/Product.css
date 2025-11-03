@@ -45,3 +45,50 @@
     margin-right: 10px;
 
 }
+.categories{
+    font-weight: bold;
+    width: 300px;
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    padding: 10px;
+}
+.categories>div span{
+    font-weight: normal;
+}
+.notes-title{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+.notes-container{
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    padding: 10px;
+    width: 300px;
+}
+.top,
+.heart,
+.base{
+    font-weight: bold;
+}
+.single-text{
+    font-weight: normal;
+}
+.product-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.product-info > div:nth-child(1){
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.product-info > div:nth-child(2){
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}

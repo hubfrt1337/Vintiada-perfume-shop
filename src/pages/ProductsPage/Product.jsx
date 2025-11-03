@@ -40,26 +40,29 @@ export function Product() {
                             </div>
                         </div>
                         <div className="complete-info">
-                            <div className="type-product">Type {product.type}</div>
-                            <div className="category">Category {product.category}</div>
-                            <div className="gender">Gender {product.gender}</div>
+                            <div className="categories">
+                                <div className="type-product">Type: <span>{product.type}</span></div>
+                                <div className="category">Category: <span>{product.category}</span></div>
+                                <div className="gender">Gender: <span>{product.gender}</span></div>
+                            </div>
+                            <p className="notes-title">Notes</p>
                             <div className="notes-container">
-                                <p>Notes</p>
+                                
                                 <div className="top">
                                     <div className="notes-text">Top: </div>{product.notes.top.map((p, i) => {
-                                    return (<div key={i}>{p}</div>)
+                                        return (<div className="single-text" key={i}>{p}</div>)
                                     })}
                                 </div>
                                 <div className="heart">
                                     <div className="notes-text">Heart: </div>
                                     {product.notes.heart.map((p, i) => {
-                                        return (<div key={i}>{p}</div>)
+                                        return (<div className="single-text" key={i}>{p}</div>)
                                     })}
                                 </div>
                                 <div className="base">
                                     <div className="notes-text">Base: </div>
                                     {product.notes.base.map((p, i) => {
-                                        return (<div key={i}>{p}</div>)
+                                        return (<div className="single-text" key={i}>{p}</div>)
                                     })}
                                 </div>
                             </div>
