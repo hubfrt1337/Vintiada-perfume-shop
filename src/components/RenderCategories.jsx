@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 export function RenderCategories({ perfumes, type }) {
     let filteredArray;
     if (type === "woody") {
@@ -39,20 +40,21 @@ export function RenderCategories({ perfumes, type }) {
         <section className="products-flex">
             {filteredArray.map(perfum => {
                 return (
-                    <div className="flex-best box" key={perfum.id}>
-                        <div className="image-container">
-                            <img src={perfum.image}></img>
-                        </div>
-                        <div className="perfum-brand">{perfum.brand}</div>
-                        <div className="perfum-name">{perfum.name}</div>
-                        <div className="perfum-type">Perfume for
-                            {perfum.gender === "masculine" ? " Men" :
-                                perfum.gender === "feminine" ? " Women"
-                                    : " Everyone"}
+                    <Link to={`/product/${perfum.id}`} key={perfum.id} style={{ textDecoration: "none" }}>
+                        <div className="flex-best box" key={perfum.id}>
+                            <div className="image-container">
+                                <img src={perfum.image}></img>
+                            </div>
+                            <div className="perfum-brand">{perfum.brand}</div>
+                            <div className="perfum-name">{perfum.name}</div>
+                            <div className="perfum-type">Perfume for
+                                {perfum.gender === "masculine" ? " Men" :
+                                    perfum.gender === "feminine" ? " Women"
+                                        : " Everyone"}
 
+                            </div>
                         </div>
-                    </div>
-
+                    </Link>
                 )
             })}
         </section>
