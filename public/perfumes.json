@@ -218,7 +218,7 @@
     {
         "id": 9,
         "name": "Ocean Mist",
-        "image": "mist.webp",
+        "image": "/mist.webp",
         "brand": "Calvin Klein",
         "type": "EDT",
         "notes": {
@@ -452,7 +452,7 @@
     {
         "id": 18,
         "name": "Peach Mirage",
-        "image": "pech.avif",
+        "image": "/pech.avif",
         "brand": "Juliette Has a Gun",
         "type": "EDT",
         "notes": {
@@ -504,7 +504,7 @@
     {
         "id": 20,
         "name": "Lime Serenade",
-        "image": "atelier.jpg",
+        "image": "/atelier.jpg",
         "brand": "Atelier Cologne",
         "type": "EDT",
         "notes": {
@@ -556,7 +556,7 @@
     {
         "id": 22,
         "name": "Amber Drift",
-        "image": "labo.jpg",
+        "image": "/labo.jpg",
         "brand": "Le Labo",
         "type": "EDP",
         "notes": {
@@ -1336,7 +1336,7 @@
     {
         "id": 52,
         "name": "Pearl Bloom",
-        "image": "oscar.webp",
+        "image": "/oscar.webp",
         "brand": "Oscar de la Renta",
         "type": "EDP",
         "notes": {
@@ -1414,7 +1414,7 @@
     {
         "id": 55,
         "name": "Orchid Haze",
-        "image": "haze.webp",
+        "image": "/haze.webp",
         "brand": "Carolina Herrera",
         "type": "EDP",
         "notes": {
