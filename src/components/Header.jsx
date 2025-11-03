@@ -5,9 +5,11 @@ import { VscAccount } from "react-icons/vsc";
 import { NavLink, Link } from "react-router";
 import { useEffect, useState } from "react";
 export function Header() {
+    const {perfumes} = useOutletContext()
     const { cart } = useOutletContext()
     const [quantityNumber, setQuantityNumber] = useState(0)
     const [searchValue, setSearchValue] = useState("");
+    const [filteredSearch, setFilteredSearch] = useState(perfumes);
     useEffect(() => {
         if(cart.length > 0) {
           let number = cart.reduce((acc, curr) => acc + curr.quantity, 0)
@@ -17,7 +19,17 @@ export function Header() {
     }, [cart])
 
     const handleSearchChange = (e) => {
-        setSearchValue(e.target.value);
+        const searching = e.target.value
+        setSearchValue(searching);
+        
+        if(searching === '') { setFilteredSearch(perfumes); return }
+        const filtered = perfumes.filter(perfum => {
+            if(perfum.name.toLowerCase().includes(searching.toLowerCase())){
+                return perfum;
+            }
+        })
+        setFilteredSearch(filtered)
+        console.log(filtered)
     }
     return (
         <header>
@@ -33,6 +45,7 @@ export function Header() {
                         type="text"
                         placeholder="Search for perfume">
                     </input>
+                    <ul>{filteredSearch.map(perfum => <li>{perfum.name}</li>)}</ul>
                 </div>
                 <div className="right-section">
                     <div className="sign-in">
