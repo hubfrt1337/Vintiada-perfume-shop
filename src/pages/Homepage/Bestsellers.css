@@ -92,10 +92,10 @@
     }
 }
 .quantity-container{
-    display: grid;
     max-width: 150px;
     grid-template-columns: 50px;
     gap: 5px;
+    
 }
 .input-quantity{
     width: 25px;
@@ -144,4 +144,20 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.added-message{
+   margin-top: 5px;
+   color: white;
+   background-color: rgb(61, 173, 61);
+   border: none;
+   padding: 1px 5px;
+   border-radius: 5px;
+   opacity: 0.8;
+   display: block;
+   transition: all linear 1s;
+   opacity: 0;
+}
+.add-show{
+    opacity: 1;
 }
