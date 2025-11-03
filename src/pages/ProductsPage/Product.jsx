@@ -1,12 +1,14 @@
 import { useOutletContext, useParams } from 'react-router';
 import './Product.css';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { addToCart } from '../../utils/cartUtils';
+import { showAddedMessage } from '../../utils/showMessage';
 export function Product() {
     const { perfumes, setCart } = useOutletContext()
     const { id } = useParams();
     const product = perfumes.find(p => p.id === Number(id))
     const [val, setVal] = useState(1);
+    const addRef = useRef();
     const changeVal = (sign) => {
         if (sign === "-") {
             if (val <= 0) {
@@ -25,9 +27,7 @@ export function Product() {
             if(val){
                 const updatedCart = await addToCart(product, number);
                 setCart(updatedCart)
-                console.log("działa")
             }
-            console.log("tutaj")
         }
         catch (error) {
             console.error('Error adding to cart:', error);
@@ -39,7 +39,7 @@ export function Product() {
                 ? (
                     <>
                         <div className="img-container"><img src={product.image}></img></div>
-                        <div className="product-info">
+                        <div className="product-info relat">
                             <div>{product.name}</div>
                             <div>{product.brand}</div>
                             <div className="stars-container"><img src={`/rating-${product.stars}.png`}></img></div>
@@ -50,8 +50,11 @@ export function Product() {
                                 }} className="minus">-</button>
                                 <span className="quantity">{val}</span>
                                 <button onClick={() => { changeVal("+") }} className="plus">+</button>
-                                <button className="add" onClick={() => {handleAddToCart(product, val)}}>Add to Cart</button>
+                                <button className="add" 
+                                onClick={() => 
+                                {handleAddToCart(product, val); showAddedMessage(addRef)}}>Add to Cart</button>
                             </div>
+                            <div ref={addRef} className="added-message absolut">added</div>
                         </div>
                         <div className="complete-info">
                             <div className="categories">
