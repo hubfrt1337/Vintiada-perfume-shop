@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 export function Header() {
     const { cart } = useOutletContext()
     const [quantityNumber, setQuantityNumber] = useState(0)
+    const [searchValue, setSearchValue] = useState("");
     useEffect(() => {
         if(cart.length > 0) {
           let number = cart.reduce((acc, curr) => acc + curr.quantity, 0)
@@ -15,7 +16,9 @@ export function Header() {
         else setQuantityNumber(0)
     }, [cart])
 
-
+    const handleSearchChange = (e) => {
+        setSearchValue(e.target.value);
+    }
     return (
         <header>
             <nav className="navbar">
@@ -24,6 +27,8 @@ export function Header() {
                 </div>
                 <div className="middle-section">
                     <input
+                        value={searchValue}
+                        onChange={handleSearchChange}
                         className="search-input"
                         type="text"
                         placeholder="Search for perfume">
