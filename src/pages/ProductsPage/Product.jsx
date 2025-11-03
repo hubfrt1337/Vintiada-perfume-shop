@@ -1,8 +1,9 @@
 import { useOutletContext, useParams } from 'react-router';
 import './Product.css';
 import { useState } from 'react';
+import { addToCart } from '../../utils/cartUtils';
 export function Product() {
-    const { perfumes } = useOutletContext()
+    const { perfumes, setCart } = useOutletContext()
     const { id } = useParams();
     const product = perfumes.find(p => p.id === Number(id))
     const [val, setVal] = useState(1);
@@ -18,6 +19,19 @@ export function Product() {
             setVal(val + 1)
         }
 
+    }
+    const handleAddToCart = async (product, number) => {
+        try {
+            if(val){
+                const updatedCart = await addToCart(product, number);
+                setCart(updatedCart)
+                console.log("działa")
+            }
+            console.log("tutaj")
+        }
+        catch (error) {
+            console.error('Error adding to cart:', error);
+        }
     }
     return (
         <div className="product-page-container">
@@ -36,7 +50,7 @@ export function Product() {
                                 }} className="minus">-</button>
                                 <span className="quantity">{val}</span>
                                 <button onClick={() => { changeVal("+") }} className="plus">+</button>
-                                <button className="add">Add to Cart</button>
+                                <button className="add" onClick={() => {handleAddToCart(product, val)}}>Add to Cart</button>
                             </div>
                         </div>
                         <div className="complete-info">

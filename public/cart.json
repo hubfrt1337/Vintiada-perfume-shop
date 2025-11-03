@@ -106,5 +106,33 @@
     "stars": 4,
     "price": 10500,
     "quantity": 1
+  },
+  {
+    "id": 6,
+    "name": "Oud Noir",
+    "image": "/pour.jpg",
+    "brand": "Versace",
+    "type": "EDP",
+    "notes": {
+      "top": [
+        "black pepper",
+        "neroli"
+      ],
+      "heart": [
+        "saffron",
+        "cardamom"
+      ],
+      "base": [
+        "oud",
+        "patchouli",
+        "leather"
+      ]
+    },
+    "category": "oriental",
+    "gender": "masculine",
+    "bestseller": true,
+    "stars": 5,
+    "price": 11500,
+    "quantity": 1
   }
 ]
