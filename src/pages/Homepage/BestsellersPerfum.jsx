@@ -1,11 +1,13 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { addToCart } from "../../utils/cartUtils"
 import { useOutletContext } from "react-router"
 import { Link } from "react-router"
+import { showAddedMessage } from "../../utils/showMessage"
 export function BestsellersPerfum({ perfum }) {
     const { setCart } = useOutletContext()
     const [quantity, setQuantity] = useState(1)
     const [isEditing, setIsEditing] = useState(false)
+    const addRef = useRef()
     const handleAddToCart = async (product, amount) => {
 
         try {
@@ -56,9 +58,10 @@ export function BestsellersPerfum({ perfum }) {
 
                 <button
                     className="add-btn"
-                    onClick={() => { handleAddToCart(perfum, quantity) }}
+                    onClick={() => { handleAddToCart(perfum, quantity); showAddedMessage(addRef) }}
                 >Add</button>
             </div>
+            <div ref={addRef} className="added-message">Added</div>
         </div>
     )
 }

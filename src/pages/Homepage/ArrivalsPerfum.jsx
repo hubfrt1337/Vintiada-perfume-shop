@@ -1,6 +1,7 @@
 import { useState, useRef } from "react"
 import { addToCart } from "../../utils/cartUtils"
 import { useOutletContext } from "react-router"
+import { showAddedMessage } from "../../utils/showMessage"
 
 export function ArrivalsPerfum({ perfum }) {
     const addRef = useRef(null)
@@ -21,13 +22,7 @@ export function ArrivalsPerfum({ perfum }) {
     const controlledInput = (e) => {
         setQuantity(Number(e.target.value))
     }
-    const showAddedMessage = () => {
-        addRef.current.classList.add("add-show")
-        
-        setTimeout(() => {
-            addRef.current.classList.remove("add-show")
-        }, 1000)
-    }
+    
     return (
         <>
                     <div className="flex-best" key={perfum.id}>
@@ -60,7 +55,7 @@ export function ArrivalsPerfum({ perfum }) {
 
                             <button
                                 className="add-btn"
-                                onClick={(e) => { handleAddToCart(perfum, quantity); showAddedMessage(e) }}
+                                onClick={() => { handleAddToCart(perfum, quantity); showAddedMessage(addRef) }}
                             >Add</button>
                             
                         </div>
