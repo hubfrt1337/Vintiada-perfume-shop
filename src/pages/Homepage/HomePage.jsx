@@ -10,6 +10,9 @@ import { Arrivals } from "./Arrivals"
 import "./HomePage.css"
 import { Adv } from "./Advertisements"
 import { useOutletContext } from "react-router"
+import { FooterComp } from "../../components/FooterComp.jsx"
+
+
 export function HomePage(){
     useEffect(() => {
         document.title = "Vintiada"
@@ -41,6 +44,7 @@ export function HomePage(){
             <Adv></Adv>
             <BestSellers perfumes={perfumes} setPerfumes={setPerfumes}></BestSellers>
             <Arrivals perfumes={perfumes}></Arrivals>
+            <FooterComp></FooterComp>
         </>
     )
 }

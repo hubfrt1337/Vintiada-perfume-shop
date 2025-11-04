@@ -1,0 +1,17 @@
+.footer-container{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 3rem;
+    font-size: 1.3rem;
+}
+.footer-first-row{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.footer-text{
+    text-decoration: underline;
+    cursor: pointer;
+}
