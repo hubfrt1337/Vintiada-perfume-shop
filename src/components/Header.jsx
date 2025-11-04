@@ -4,13 +4,12 @@ import { IoCartOutline } from "react-icons/io5";
 import { VscAccount } from "react-icons/vsc";
 import { NavLink, Link } from "react-router";
 import { useEffect, useRef, useState } from "react";
-import e from "cors";
 export function Header() {
     const {perfumes} = useOutletContext()
     const { cart } = useOutletContext()
     const [quantityNumber, setQuantityNumber] = useState(0)
     const [searchValue, setSearchValue] = useState("");
-    const [filteredSearch, setFilteredSearch] = useState(perfumes);
+    const [filteredSearch, setFilteredSearch] = useState([]);
     const productsRef = useRef();
     const inputRef = useRef();
     useEffect(() => {
@@ -20,7 +19,9 @@ export function Header() {
         }
         else setQuantityNumber(0)
     }, [cart])
-
+    useEffect(() => {
+        setFilteredSearch(perfumes)
+    }, [perfumes])
     const handleSearchChange = (e) => {
         const searching = e.target.value
         setSearchValue(searching);
@@ -32,20 +33,20 @@ export function Header() {
             }
         })
         setFilteredSearch(filtered)
-        console.log(filtered)
     }
     const showContainer = (e, ref) => {
         ref.current.classList.add("show-ref")
-        console.log(ref.current)
+        
     }
     window.addEventListener("click", (e) => {
         if(!e.target.classList.contains("search-input")){
-            if(productsRef.current.classList.contains("show-ref")){
+            if(productsRef && productsRef.current.classList.contains("show-ref")){
                 productsRef.current.classList.remove("show-ref")
             }
             
         }
     })
+    
     return (
         <header>
             <nav className="navbar">
