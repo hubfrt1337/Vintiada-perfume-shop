@@ -40,7 +40,10 @@ export function Header() {
     }
     window.addEventListener("click", (e) => {
         if(!e.target.classList.contains("search-input")){
-            productsRef.current.classList.remove("show-ref")
+            if(productsRef.current.classList.contains("show-ref")){
+                productsRef.current.classList.remove("show-ref")
+            }
+            
         }
     })
     return (
@@ -60,7 +63,11 @@ export function Header() {
                         ref={inputRef}
                         >    
                     </input>
-                    <div ref={productsRef} className="header-products">{filteredSearch.map(perfum => <div>{perfum.name}</div>)}</div>
+                    <div 
+                        ref={productsRef} 
+                        className="header-products">
+                            {filteredSearch.map(perfum => <Link key={perfum.id} to={`/product/${perfum.id}`}><div className="single-search-product">{perfum.name}</div></Link>)}
+                    </div>
                 </div>
                 <div className="right-section">
                     <div className="sign-in">

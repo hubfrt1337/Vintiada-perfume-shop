@@ -90,17 +90,24 @@ header{
     right: 0;
     color: black;
     display: none;
+    z-index: 5;
+    max-height: 270px;
+    overflow: hidden;
+    top: 40px;
     
 }
-.header-products>div{
+.single-search-product{
     padding: 0.5rem;
     border-bottom: 1px solid rgb(209, 209, 209);
     cursor: pointer;
 
 }
-.header-products>div:hover{
+.single-search-product:hover{
     background-color: rgb(243, 238, 238);
 }
 .show-ref{
     display: block;
+}
+.header-products>a{
+    text-decoration: none;
 }
