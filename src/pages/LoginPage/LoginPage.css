@@ -1,0 +1,31 @@
+.form-singup{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.form-singup input{
+    padding: 2px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-singup button{
+    padding: 10px;
+    font-size: 16px;
+    background-color: #0b7a0e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+}
+.form-singup button:hover{
+    background-color: #1dcf26;
+}

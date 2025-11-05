@@ -20,7 +20,7 @@ export function LoginPage() {
     return (
         <>
             <Header></Header>
-            <form onSubmit={handleSubmit}>
+            <form className="form-singup" onSubmit={handleSubmit}>
                 <label>Username
                 <input 
                 onChange={handleUsernameChange}
