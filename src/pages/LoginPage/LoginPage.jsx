@@ -20,7 +20,21 @@ export function LoginPage() {
     return (
         <>
             <Header></Header>
-           
+           <form onSubmit={handleSubmit}>
+                <label>Username
+                <input 
+                onChange={handleUsernameChange}
+                value={username}
+                type="text"></input>
+                </label>
+                <label>Password
+                <input 
+                onChange={handlePasswordChange}
+                value={password}
+                type="password"></input>
+                </label>
+                <button type="submit">Sign-up</button>
+            </form>
         </>
     )
 }
