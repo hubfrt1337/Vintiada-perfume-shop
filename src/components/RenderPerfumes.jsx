@@ -18,6 +18,8 @@ export function RenderPerfumes({ perfumes, type }) {
                                             : " Everyone"}
 
                                 </div>
+                                <div className="stars-container"><img src={`/rating-${perfum.stars}.png`}></img></div>
+                                <div>{(perfum.price / 100).toFixed(2)}$</div>
                             </div>
                         </Link>
                     )
