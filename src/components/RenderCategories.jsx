@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { FooterComp } from "./FooterComp";
 export function RenderCategories({ perfumes, type }) {
     let filteredArray;
     if (type === "woody") {
@@ -37,6 +38,7 @@ export function RenderCategories({ perfumes, type }) {
     }
 
     return (
+        <>
         <section className="products-flex">
             {filteredArray.map(perfum => {
                 return (
@@ -60,5 +62,7 @@ export function RenderCategories({ perfumes, type }) {
                 )
             })}
         </section>
+        <FooterComp></FooterComp>
+        </>
     )
 }

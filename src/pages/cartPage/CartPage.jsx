@@ -5,6 +5,7 @@ import "./CartPage.css"
 import { addToCart, subtractFromCart } from "../../utils/cartUtils.js";
 import { EmptyCart } from "../../components/EmptyCart.jsx";
 import { CartSummary } from "./CartSummary.jsx";
+import { FooterComp } from "../../components/FooterComp.jsx";
 export function CartPage() {
     const {cart, setCart} = useOutletContext()
     const [cost, setCost] = useState(3.99)
@@ -94,6 +95,7 @@ export function CartPage() {
             </div>
             : <EmptyCart></EmptyCart>
             }
+            <FooterComp></FooterComp>
         </>
     )
 }

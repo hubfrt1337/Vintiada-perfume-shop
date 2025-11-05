@@ -1,6 +1,8 @@
 import { Link } from "react-router"
+import { FooterComp } from "./FooterComp"
 export function RenderPerfumes({ perfumes, type }) {
     return (
+        <>
         <section className="products-flex">
             {perfumes.filter(perfum => perfum.gender === type)
                 .map(perfum => {
@@ -25,5 +27,7 @@ export function RenderPerfumes({ perfumes, type }) {
                     )
                 })}
         </section>
+        <FooterComp></FooterComp>
+        </>
     )
 }

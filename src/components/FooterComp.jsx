@@ -8,7 +8,7 @@ export function FooterComp(){
                     <div className="time">Mon-Fri 8:00 - 19:00</div>
                 </div>
                 <div className="footer-text">info@vintiada.com</div>
-                <div className="footer-text">Contact</div>
+                <div className="footer-text">Warsaw winbred st. 21a</div>
             </div>
         </footer>
     )
