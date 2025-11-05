@@ -39,8 +39,9 @@ export function Header() {
         
     }
     window.addEventListener("click", (e) => {
+        if(!(e.target instanceof Element)) return;
         if(!e.target.classList.contains("search-input")){
-            if(productsRef && productsRef.current.classList.contains("show-ref")){
+            if(productsRef.current && productsRef.current.classList.contains("show-ref")){
                 productsRef.current.classList.remove("show-ref")
             }
             
