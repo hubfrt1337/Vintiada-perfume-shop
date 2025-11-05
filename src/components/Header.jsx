@@ -73,7 +73,9 @@ export function Header() {
                 </div>
                 <div className="right-section">
                     <div className="sign-in">
+                        <NavLink to="/signup">
                         <VscAccount className="icons-header" />
+                        </NavLink>
                     </div>
                     <div className="cart-container">
                         <NavLink to="/cart">

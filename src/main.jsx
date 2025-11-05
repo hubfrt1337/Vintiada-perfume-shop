@@ -11,6 +11,7 @@ import { Oriental } from './pages/Oriental.jsx'
 import { Floral } from './pages/Floral.jsx'
 import { CartPage } from './pages/cartPage/CartPage.jsx'
 import { ProductsPage } from './pages/ProductsPage/ProductsPage.jsx'
+import { LoginPage } from './pages/LoginPage/LoginPage.jsx'
 import './index.css'
 import App from './App.jsx'
 const router = createBrowserRouter([
@@ -55,9 +56,13 @@ const router = createBrowserRouter([
         element: <CartPage></CartPage>
       },
       {
-    path: "/product/:id?",
-    element: <ProductsPage></ProductsPage>
-  },
+        path: "/product/:id?",
+        element: <ProductsPage></ProductsPage>
+      },
+      {
+        path: "/signup",
+        element: <LoginPage></LoginPage>
+      }
     ]
   },
 ])
