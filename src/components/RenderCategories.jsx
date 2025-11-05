@@ -62,7 +62,6 @@ export function RenderCategories({ perfumes, type }) {
                 )
             })}
         </section>
-        <FooterComp></FooterComp>
         </>
     )
 }

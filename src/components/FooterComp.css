@@ -5,6 +5,7 @@
     color: white;
     padding: 3rem;
     font-size: 1.3rem;
+    justify-self: bottom;
 }
 .footer-first-row{
     display: flex;

@@ -27,7 +27,6 @@ export function RenderPerfumes({ perfumes, type }) {
                     )
                 })}
         </section>
-        <FooterComp></FooterComp>
         </>
     )
 }

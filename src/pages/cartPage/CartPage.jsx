@@ -95,7 +95,6 @@ export function CartPage() {
             </div>
             : <EmptyCart></EmptyCart>
             }
-            <FooterComp></FooterComp>
         </>
     )
 }

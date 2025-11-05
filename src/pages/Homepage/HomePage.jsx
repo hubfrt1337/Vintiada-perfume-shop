@@ -44,7 +44,6 @@ export function HomePage(){
             <Adv></Adv>
             <BestSellers perfumes={perfumes} setPerfumes={setPerfumes}></BestSellers>
             <Arrivals perfumes={perfumes}></Arrivals>
-            <FooterComp></FooterComp>
         </>
     )
 }
