@@ -1,16 +1,31 @@
-# React + Vite
+# Vintiada
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vintiada's e-commerce perfume store allows you to purchase items, update pages, and view products in real time.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## React Compiler
+OPEN CMD
+git clone https://github.com/hubfrt1337/Vintiada-perfume-shop.git
+cd Vintiada-perfume-shop
+npm install
+npm run server
+OPEN SECOND CMD
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies
 
-## Expanding the ESLint configuration
+Vite
+React
+Express
+Cors
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Preview
+
+![ss1](src/assets/ss1.png)
+![ss2](src/assets/ss2.png)
+![ss3](src/assets/ss3.png)
+![ss4](src/assets/ss4.png)
+
+
+## Live preview
