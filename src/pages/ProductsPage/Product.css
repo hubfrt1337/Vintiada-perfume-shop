@@ -93,3 +93,26 @@
     margin-bottom: 10px;
     text-decoration: underline;
 }
+@media screen and (max-width: 600px){
+    .product-page-container{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0.5rem;
+        padding-bottom: 2rem;
+    }
+    .categories{
+        max-width: 250px;
+    }
+    .notes-container{
+        max-width: 250px;
+        
+    }
+    .top,
+    .heart,
+    .base{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 1rem;
+    }
+}
