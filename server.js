@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 const CART_PATH = join(__dirname, 'public', 'cart.json');
+const FORM_PATH = join(__dirname, 'public', 'form.json');
 
 app.get('/api/cart', async (req, res) => {
   try {
@@ -43,7 +44,7 @@ app.delete("/api/cart", async (req, res) => {
   }
 })
 
-app.listen(3001, () => console.log('API server listening on http://localhost:3001'));
+
 
 app.delete("/api/cart/:id", async (req, res) => {
   try {
@@ -67,3 +68,25 @@ app.delete("/api/cart/:id", async (req, res) => {
   }
 })
 
+app.post("/api/form", async (req, res) => {
+  try {
+    const formData = req.body;
+    await fs.writeFile(FORM_PATH, JSON.stringify(formData, null, 2), "utf8")
+    res.json({message: "Form data saved successfully"})
+  }
+  catch(err){
+    res.status(500).json({error: 'Cannot process form data'})
+  }
+});
+
+app.get("/api/form", async (req, res) => {
+  try {
+    const raw = await fs.readFile(FORM_PATH, "utf8");
+    res.json(JSON.parse(raw));
+  }
+  catch (err) {
+    res.status(500).json({error: "Cannot read form data"})
+  }
+});
+
+app.listen(3001, () => console.log('API server listening on http://localhost:3001'));
