@@ -3,6 +3,8 @@ import cors from 'cors';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import fs from 'fs/promises';
+import path from 'path';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -89,5 +91,26 @@ app.get("/api/form", async (req, res) => {
   }
 });
 
+
+
+
+// Serwowanie frontendu z folderu dist
+app.use(express.static(path.join(__dirname, 'dist')));
+
+
+
+app.get(/.*/, (req, res) => {
+  const indexPath = path.join(__dirname, 'dist', 'index.html');
+  res.sendFile(indexPath, (err) => {
+    if (err) {
+      // jeśli nie masz buildu w dist (tryb dev), spróbuj pliku w public lub zwróć 404
+      const fallback = path.join(__dirname, 'public', 'index.html');
+      res.sendFile(fallback, (err2) => {
+        if (err2) res.status(404).end();
+      });
+    }
+  });
+});
+const PORT = process.env.PORT || 3001;
 
 app.listen(3001, () => console.log('API server listening on http://localhost:3001'));
