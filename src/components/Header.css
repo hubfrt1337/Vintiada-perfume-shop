@@ -40,6 +40,7 @@ header{
     background-color: white;
     color: black;
     border-radius: 5px;
+    width: 100px;
 }
 .type:hover{
     cursor: pointer;
@@ -110,4 +111,28 @@ header{
 }
 .header-products>a{
     text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px){
+    .types-container{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .type{
+        width: 70px;
+        padding: 0.5rem 1rem;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+    .navbar{
+        padding: 0.5rem;
+        padding-right: 1rem;
+        gap: 10px;
+    }
+    .middle-section{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
