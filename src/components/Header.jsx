@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router";
-import "./header.css"
+import "./Header.css"
 import { IoCartOutline } from "react-icons/io5";
 import { VscAccount } from "react-icons/vsc";
 import { NavLink, Link } from "react-router";
