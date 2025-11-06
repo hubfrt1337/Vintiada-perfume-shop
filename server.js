@@ -89,16 +89,5 @@ app.get("/api/form", async (req, res) => {
   }
 });
 
-import path from 'path';
 
-// Serwowanie frontendu
-app.use(express.static(path.join(__dirname, 'dist')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/index.html'));
-});
-
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`API server listening on port ${PORT}`));
-//app.listen(3001, () => console.log('API server listening on http://localhost:3001'));
+app.listen(3001, () => console.log('API server listening on http://localhost:3001'));
