@@ -1,6 +1,7 @@
 import { FooterComp } from "../../components/FooterComp";
 import { Header } from "../../components/Header.jsx";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { ProfilPage } from "./ProfilePage.jsx";
 import "./LoginPage.css"
 
 export function LoginPage() {
@@ -8,6 +9,19 @@ export function LoginPage() {
     const [password, setPassword] = useState("");
     const [registered, setRegistered] = useState(false);
 
+    useEffect(() => {
+        const fetchForm = async () => {
+            const response = await fetch("http://localhost:3001/api/form")
+            const data = await response.json();
+            if(data.username && data.password){
+                setRegistered(true);
+                setUsername(data.username);
+                setPassword(data.password);
+            }
+            
+        }
+        fetchForm();
+    });
     const fetchFormData = async () => {
         try {
             const response = await fetch("http://localhost:3001/api/form", {
@@ -21,7 +35,7 @@ export function LoginPage() {
             }
             const data = await response.json();
             console.log("Form data submitted successfully:", data);
-            setRegistered(true);
+
         }
         catch (error) {
             console.error("Error fetching form data:", error);
@@ -37,6 +51,7 @@ export function LoginPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         fetchFormData();
+        setRegistered(true);
 
     }
     return (
@@ -58,7 +73,7 @@ export function LoginPage() {
                 </label>
                 <button type="submit">Sign-up</button>
             </form>
-            : <ProfilPage></ProfilPage>
+                : <ProfilPage username={username}></ProfilPage>
             }
         </>
     )

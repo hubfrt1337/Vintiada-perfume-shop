@@ -29,3 +29,28 @@
 .form-singup button:hover{
     background-color: #1dcf26;
 }
+
+
+/* Profile Page Styles */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 1.5rem 0.5rem;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+.username{
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
