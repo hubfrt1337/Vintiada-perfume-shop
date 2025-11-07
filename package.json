@@ -9,8 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "node server.js",
-    "dev:server": "nodemon server.js",
-    "start": "node server.js && vite"
+    "dev:server": "nodemon server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
