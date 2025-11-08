@@ -5,27 +5,37 @@ import { dirname, join } from 'path';
 import fs from 'fs/promises';
 import path from 'path';
 
-
-app.use((req, res, next) => {
-          res.header('Access-Control-Allow-Origin', 'https://vintiada-perfume-shop.onrender.com'); // Replace with your actual frontend domain
-          res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-          res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-          if (req.method === 'OPTIONS') {
-            return res.sendStatus(200);
-          }
-          next();
-        });
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const app = express();
 
-app.use(cors());
+// skonfiguruj origin przez zmienną środowiskową (na Render ustaw FRONTEND_URL)
+const FRONTEND = process.env.FRONTEND_URL || 'http://localhost:5173';
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    // allow tools (no origin) or allowed frontends
+    if (!origin) return callback(null, true);
+    const allowed = [FRONTEND, 'http://localhost:3000'];
+    if (allowed.includes(origin)) return callback(null, true);
+    callback(new Error('Not allowed by CORS'));
+  },
+  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization'],
+  credentials: true
+};
+
+app.use(cors(corsOptions));      // jednorazowe użycie
 app.use(express.json());
 app.use(express.static('public'));
 
+ 
+app.options('*', (req,res) => { res.setHeader('Access-Control-Allow-Private-Network','true'); res.sendStatus(204); });
+
 const CART_PATH = join(__dirname, 'public', 'cart.json');
 const FORM_PATH = join(__dirname, 'public', 'form.json');
+
+
 
 app.get('/api/cart', async (req, res) => {
   try {
@@ -103,7 +113,6 @@ app.get("/api/form", async (req, res) => {
 
 
 
-
 // Serwowanie frontendu z folderu dist
 app.use(express.static(path.join(__dirname, 'dist')));
 
@@ -122,5 +131,4 @@ app.get(/.*/, (req, res) => {
   });
 });
 const PORT = process.env.PORT || 3001;
-
-app.listen(3001, () => console.log('API server listening on http://localhost:3001'));
+app.listen(PORT, () => console.log(`API server listening on http://localhost:${PORT}`));
