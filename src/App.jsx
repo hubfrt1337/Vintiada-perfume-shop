@@ -16,7 +16,7 @@ function App() {
   }, [])
   useEffect(() => {
     const fetchCart = async () => {
-      const response = await fetch('http://localhost:3001/api/cart')
+      const response = await fetch(`https://vintiada-perfume-shop.onrender.com/api/form`)
       const data = await response.json();
       setCart(data)
     }
