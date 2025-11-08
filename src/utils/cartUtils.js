@@ -3,14 +3,14 @@ export const addToCart = async (product, quantity) => {
     if(!quantity) {
       quantity = 1;
     }
-    const res = await fetch('http://localhost:3001/api/cart');
+    const res = await fetch('https://vintiada-perfume-shop.onrender.com/api/cart');
     const currentCart = await res.json();
 
     const existing = currentCart.find(item => item.id === product.id);
     if (existing) existing.quantity = (existing.quantity || 0) + quantity;
     else currentCart.push({ ...product, quantity: quantity });
 
-    const saveRes = await fetch('http://localhost:3001/api/cart', {
+    const saveRes = await fetch('https://vintiada-perfume-shop.onrender.com/api/cart', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(currentCart)
@@ -28,14 +28,14 @@ export const addToCart = async (product, quantity) => {
 
 export const subtractFromCart = async (product) => {
   try {
-    const res = await fetch("http://localhost:3001/api/cart");
+    const res = await fetch("https://vintiada-perfume-shop.onrender.com/api/cart");
     const currentCart = await res.json()
 
     const existing = currentCart.find(item => item.id === product.id);
     if(existing.quantity > 1) {
       existing.quantity -= 1;
 
-      const saveRes = await fetch("http://localhost:3001/api/cart", {
+      const saveRes = await fetch("https://vintiada-perfume-shop.onrender.com/api/cart", {
       method: "PUT",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(currentCart)
@@ -46,7 +46,7 @@ export const subtractFromCart = async (product) => {
 
     }
     else if(existing.quantity === 1){
-      const delRes = await fetch(`http://localhost:3001/api/cart/${product.id}`, {
+      const delRes = await fetch(`https://vintiada-perfume-shop.onrender.com/api/cart/${product.id}`, {
         method: "DELETE",
         headers: {"Content-Type": "application/json"}
       })

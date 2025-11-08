@@ -11,7 +11,7 @@ export function LoginPage() {
 
     useEffect(() => {
         const fetchForm = async () => {
-            const response = await fetch("http://localhost:3001/api/form")
+            const response = await fetch("https://vintiada-perfume-shop.onrender.com/api/form")
             const data = await response.json();
             if(data.username && data.password){
                 setRegistered(true);
@@ -24,7 +24,7 @@ export function LoginPage() {
     });
     const fetchFormData = async () => {
         try {
-            const response = await fetch("http://localhost:3001/api/form", {
+            const response = await fetch("https://vintiada-perfume-shop.onrender.com/api/form", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username, password })
