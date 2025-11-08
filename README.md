@@ -1,6 +1,9 @@
 # Vintiada
 
 Vintiada's e-commerce perfume store allows you to purchase items, update pages, and view products in real time.
+This project uses a custom backend hosted at:
+GitHub repository: https://github.com/hubfrt1337/Vintiada-backend
+Live API Endpoint: https://vintiada-perfume-shop.onrender.com
 
 
 ## Installation
