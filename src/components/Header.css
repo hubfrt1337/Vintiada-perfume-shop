@@ -41,6 +41,10 @@ header{
     color: black;
     border-radius: 5px;
     width: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .type:hover{
     cursor: pointer;
