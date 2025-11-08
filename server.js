@@ -5,17 +5,6 @@ import { dirname, join } from 'path';
 import fs from 'fs/promises';
 import path from 'path';
 
-
-app.use((req, res, next) => {
-          res.header('Access-Control-Allow-Origin', 'https://vintiada-perfume-shop.onrender.com'); // Replace with your actual frontend domain
-          res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-          res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-          if (req.method === 'OPTIONS') {
-            return res.sendStatus(200);
-          }
-          next();
-        });
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const app = express();
@@ -24,8 +13,27 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
+
+
 const CART_PATH = join(__dirname, 'public', 'cart.json');
 const FORM_PATH = join(__dirname, 'public', 'form.json');
+
+const corsOptions = {
+  origin: [
+    'https://vintiada-perfume-shop.onrender.com', 
+    'http://localhost:5173', // dla developmentu
+    'http://localhost:3000'  // dla developmentu
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
+app.use(express.json());
+app.use(express.static('public'));
+
+
 
 app.get('/api/cart', async (req, res) => {
   try {
