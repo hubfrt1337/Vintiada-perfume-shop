@@ -45,14 +45,14 @@ export function CartPage() {
         }
     }
     const order = async () => {
-        const response = await fetch('http://localhost:3001/api/cart', {
+        const response = await fetch('https://vintiada-perfume-shop.onrender.com/api/cart', {
             method: "DELETE"
         })
         const updated = await response.json()
         setCart(updated)
     }
     const deleteProduct = async (product) => {
-        const response = await fetch(`http://localhost:3001/api/cart/${product.id}`, {
+        const response = await fetch(`https://vintiada-perfume-shop.onrender.com/api/cart/${product.id}`, {
             method: "DELETE"
         })
         const updated = await response.json()
